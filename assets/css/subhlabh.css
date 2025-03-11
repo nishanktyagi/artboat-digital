@@ -1,0 +1,122 @@
+.itemDisplayWrapper
+{
+  height:400px;
+  box-shadow: 0px 0px 20px #888888;
+  margin-top:50px;
+  padding:0px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+
+.itemDisplayPropName
+{
+  width:100%;
+  height:50px;
+  background:rgba(255,255,255,0.7);
+  font-size:22px;
+  line-height:50px;
+  white-space: nowrap;
+  overflow:hidden !important;
+  text-overflow: ellipsis;
+}
+
+.itemDisplayHeart
+{
+  text-align:right;
+  padding-right:15px;
+  font-size:28px;
+  color:#ff6666;
+  text-align:center;
+}
+
+
+.itemDisplayDetailLines
+{
+  line-height:30px;
+  font-size:15px;
+  font-weight:bold;
+  color:grey;
+}
+
+.itemDisplayDetailLines div
+{
+  white-space: nowrap;
+  overflow:hidden !important;
+  text-overflow: ellipsis;
+}
+
+.exploreBtn
+{
+  width:100%;
+  background:transparent;
+  border:2px solid #ff6666;
+  color:#ff6666;
+}
+.exploreBtn:hover
+{
+  width:100%;
+  background:#ff6666;
+  border:2px solid #ff6666;
+  color:#fff;
+}
+.amenitiesIcon {
+  fill: #FF8200;
+  color: #FF8200;
+  border-color: #FF8200;
+  display: inline-block;
+  line-height: 1;
+  transition: all .3s;
+  font-size: 50px;
+  text-align: center;
+}
+#amenities {
+  background: #ff820012;
+  padding-bottom: 50px;
+}
+.amenities .sec-title {
+  padding: 60px 0;
+}
+.amenitiesBox{
+  text-align: center;
+  border: 2px solid #FF8200;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.container.gallery-section-two {
+  padding-bottom: 70px;
+}
+.locationHeading{
+  padding-top: 25px;
+}
+.amenitiesBox:hover {
+  cursor: pointer;
+  border-radius: 5px;
+  transform: scale(1.1); 
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
+}
+#floorplan {
+  padding: 50px 0px;
+}
+@media (max-width: 768px) {
+  #myCarousel .item img{
+    height: 500px;
+    object-fit: cover;
+    object-position: left;
+    margin-bottom: 20px;
+  }
+  #location .row {
+    flex-direction: column-reverse;
+    padding: 30px 2px;
+}
+.mobile-margin-top{
+  margin-top: 30px !important;
+}
+#amenities .col-md-6 {
+  width: 50%;
+}
+.amenitiesBox {
+  padding: 20px 10px;
+}
+}

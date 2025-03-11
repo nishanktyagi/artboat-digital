@@ -1,0 +1,645 @@
+@media(max-width:991px) {
+    h2 {
+        font-size: 24px !important;
+        font-weight: 600 !important
+    }
+
+    .project-logo {
+        width: 50%
+    }
+
+    .navbar-brand {
+        width: 30%;
+        margin-right: 0 !important
+    }
+
+    #nav .navbar {
+        padding: .5rem 1rem !important
+    }
+
+    .sm-none {
+        display: none !important
+    }
+
+    .bottom-query,
+    .bottom-query.active {
+        display: none
+    }
+
+    .main-slider-banner {
+        padding-top: 75px
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 58px;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        height: 100%;
+        width: 100%;
+        background: #fff
+    }
+
+    .navbar-collapse.collapsing {
+        height: 100%;
+        left: -75%;
+        transition: height 0s ease
+    }
+
+    .navbar-collapse.show {
+        height: 100%;
+        left: 0;
+        transition: left 400ms ease-in-out
+    }
+
+    .navbar-toggler.collapsed~.navbar-collapse {
+        transition: left 400ms ease-in
+    }
+
+    .home-detail {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        padding: 50px 0 0
+    }
+
+    .navbar-toggler .navbar-toggler-icon,
+    .navbar-toggler.collapsed .close-icon {
+        display: none
+    }
+
+    .navbar-toggler.collapsed .navbar-toggler-icon {
+        display: block !important
+    }
+
+    .home-detail .inner .home-list li span {
+        font-size: 16px !important
+    }
+
+    .home-detail .inner {
+        padding: 10px 0 60px;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .15)
+    }
+
+    .home-detail .list-style-three {
+        padding: 0 20px 5px !important
+    }
+
+    .home-detail .inner .home-list {
+        padding-left: 5px !important;
+        padding-right: 5px !important
+    }
+
+    .terms-conditions {
+        bottom: 140px;
+        right: -5px
+    }
+
+    .property-info {
+        border-right: 0;
+        border-bottom: 1px solid #ff5100
+    }
+
+    .convenience-section h2 {
+        font-size: 24px;
+        padding: 100px 0 0 !important
+    }
+
+    .convenience-section .row {
+        top: 70px
+    }
+
+    .convenience-info-tabs {
+        padding: 0 10px
+    }
+
+    .convenience-section .image-column {
+        position: relative;
+        width: 100%
+    }
+
+    .convenience-section .image-column .image {
+        display: block
+    }
+
+    .convenience-info-tabs .convenience-tabs .content {
+        padding: 10px
+    }
+
+    .gallerycarousel {
+        position: relative
+    }
+
+    .gallerycarousel .owl-nav {
+        position: absolute;
+        top: 47%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between
+    }
+
+    .gallery-section-two .sec-title {
+        padding: 1px 0 50px
+    }
+
+    #gallery {
+        padding: 0
+    }
+
+    .plans-section .title-column .inner-column {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .plans-section .title-column {
+        margin-bottom: 60px
+    }
+
+    .content-column .inner-box {
+        padding: 65px 10px 40px
+    }
+
+    .call-to-action-section .btn-column {
+        text-align: center
+    }
+
+    .logo-column {
+        margin-bottom: 35px
+    }
+
+    .contact-section .info-column .inner-column {
+        padding: 25px 25px 15px
+    }
+
+    .contact-section .form-column .inner-column {
+        position: relative;
+        padding-left: 0
+    }
+
+    #amenities .image-column:before {
+        content: none !important
+    }
+
+    .contact-section {
+        padding: 80px 0 70px
+    }
+
+    .call-to-action-section {
+        padding: 50px 20px !important
+    }
+
+    .nav-item {
+        border-bottom: 1px solid #ff5100
+    }
+
+    .navbar .nav-item>a {
+        color: #222
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important
+    }
+
+    #location #myDiv {
+        flex-direction: column-reverse;
+        padding-top: 40px
+    }
+
+    #location .content-column .inner-box {
+        padding: 25px 0 0
+    }
+
+    .banner-form-container {
+        padding: 5px 10px 2px
+    }
+
+    .banner-form-title {
+        color: #ff5100;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin: 10px 0
+    }
+
+    .banner-query-box {
+        position: relative;
+        margin-bottom: 25px
+    }
+
+    .banner-query-box.d-flex {
+        display: flex
+    }
+
+    .banner-btn {
+        padding: 11px 25px;
+        line-height: 24px;
+        text-transform: uppercase;
+        background: #ff5100;
+        color: #fff;
+        border: 1px solid #ff5100;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-family: amagro, sans-serif
+    }
+
+    .banner-btn:hover {
+        color: #ff5100;
+        background-color: #fff;
+        border: 1px solid #ff5100
+    }
+
+    .bottom-btn {
+        background-color: #ff5100;
+        color: #fff;
+        padding: 12px 15px;
+        width: 100%;
+        font-family: amagro;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px
+    }
+
+    #mobile-footer-widget {
+        position: fixed;
+        width: 100%;
+        padding: 0 !important;
+        margin: 0;
+        left: 0;
+        bottom: 0;
+        z-index: +999
+    }
+
+    .main-footer .footer-bottom {
+        margin-bottom: 45px;
+        border-bottom: 1px solid #fff !important;
+    }
+
+    .modal-title {
+        font-size: 24px;
+        color: #ff5100;
+        text-transform: uppercase
+    }
+
+    .about-section-two .content-column .inner-column {
+        padding-left: 0
+    }
+
+    .about-section-two .content-column h1,
+    .call-to-action-section .text-column h2 {
+        font-size: 24px
+    }
+
+    .about-section-two .about-column .inner-column {
+        padding-left: 0;
+        padding-top: 40px
+    }
+
+    .border-right {
+        border-right: 1px solid #ff5100 !important
+    }
+
+    .plans-section .tabs-content .tab .image img {
+        width: 100%;
+        display: block;
+        min-height: 280px
+    }
+
+    .callnow-container {
+        background-color: #ff5100;
+        color: #fff;
+        padding: 12px 15px;
+        border-right: 1px solid #fff
+    }
+
+    .callnow-btn {
+        text-decoration: none
+    }
+
+    .callnow-btn p {
+        text-decoration: none;
+        font-size: 14px;
+        color: #fff;
+        font-weight: 600
+    }
+
+    .home-detail .inner .home-list li {
+        text-align: center
+    }
+
+    .developer-logo-mobile {
+        margin-left: -15px
+    }
+
+    .mobie-qr-code {
+        text-align: center
+    }
+
+    .thank-you-container {
+        width: 100%;
+        padding: 0 10px
+    }
+
+    .privacy-policy-content {
+        margin-top: 60px;
+        margin-bottom: 80px
+    }
+
+    section.call-to-action-section.container-fluid.align-self-center {
+        padding-top: 0 !important
+    }
+
+  
+
+    .rera-no {
+        word-wrap: break-word;
+        padding: 0 10px
+    }
+
+    img.adobe-logo {
+        width: 85%;
+        margin-left: -15px
+    }
+}
+
+@media(min-width:992px) {
+    a.navbar-brand {
+        width: 19%
+    }
+
+    img.adobe-logo {
+        width: 40%
+    }
+
+    .md-none {
+        display: none !important
+    }
+
+    .footer-query-box {
+        position: fixed;
+        right: 0;
+        bottom: 10px;
+        left: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center
+    }
+
+    .default-form .form-control::-moz-placeholder {
+        color: #fff;
+        opacity: 1
+    }
+
+    .default-form .form-control:-ms-input-placeholder {
+        color: #fff
+    }
+
+    .default-form .form-control::-webkit-input-placeholder {
+        color: #fff
+    }
+
+    .home-detail {
+        position: absolute;
+        top: 160px;
+        left: 100px;
+        background: #fff;
+        padding: 10px 15px;
+        width: 360px
+    }
+
+    .home-detail .inner:before {
+        border-radius: 0;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
+        position: absolute;
+        content: "";
+        left: -30px;
+        top: -30px;
+        bottom: -30px;
+        right: -30px;
+        border: 30px solid rgba(255, 255, 255, .2)
+    }
+
+    .bottom-query-text {
+        width: 95% !important;
+        height: 35px !important;
+        display: block;
+        margin: auto;
+        padding: 0 5px;
+        font-size: 13px
+    }
+
+    .property-info-section {
+        /* width: 90% !important;
+        top: -85px;
+        background: #fff;
+        z-index: 99;
+        border-radius: 20px; */
+        box-shadow: 0 0 12px 0 #aaa
+    }
+
+    .property-info:last-child {
+        border-right: 0
+    }
+
+    .row-home-details {
+        justify-content: space-between
+    }
+
+    #nav-menu {
+        align-items: center
+    }
+
+    .condition-label {
+        margin-left: 10px
+    }
+
+    .developer-logo-column {
+        width: 21%
+    }
+
+    .privacy-policy-content {
+        margin-bottom: 130px
+    }
+
+    .thank-you-logo {
+        width: max-content
+    }
+}
+
+@media(min-width:768px) and (max-width:1279px) {
+    .home-detail {
+        display: none
+    }
+
+    .project-logo {
+        width: 60%
+    }
+
+    .property-info {
+        width: 16.66% !important;
+        padding: 0 5px
+    }
+
+    #location #myDiv {
+        flex-direction: row
+    }
+
+    .content-column .inner-box {
+        padding: 20px 10px
+    }
+
+    .content-column .inner-box .text {
+        margin-bottom: 25px
+    }
+
+    .featured-block {
+        margin-bottom: 15px
+    }
+
+    .featured-block .featured-inner h3 {
+        font-size: 14px;
+        margin-bottom: 15px;
+        padding-left: 15px;
+        border-left: 5px solid #ff5100
+    }
+
+    .plans-section .title-column .inner-column {
+        padding-top: 20px
+    }
+
+    #location #myDiv {
+        padding-top: 0
+    }
+
+    .property-info {
+        border-right: 1px solid #e6e6e6;
+        border-bottom: 0
+    }
+
+    .navbar .nav-item>a {
+        margin: 0 4px
+    }
+
+    .plans-section .title-column {
+        margin-bottom: 0
+    }
+
+    #highlights .image-column,
+    .image-column .image,
+    #highlights .image-column img {
+        height: 100%
+    }
+
+    .call-to-action-section .row {
+        width: 100%
+    }
+
+    .logo-column img {
+        width: 100%
+    }
+
+    .call-to-action-section {
+        padding: 50px 40px !important
+    }
+
+    .enquiry-text-respon {
+        font-size: 20px
+    }
+}
+
+@media(min-width:1097px) and (max-width:1366px) {
+    .plans-section .title-column .inner-column {
+        position: relative;
+        padding-top: 30px;
+        padding-right: 20px;
+        padding-left: 20px
+    }
+
+    .about-section-two .content-column .inner-column {
+        padding-left: 0
+    }
+
+    .about-section-two .content-column h1,
+    .call-to-action-section .text-column h2 {
+        font-size: 24px !important;
+        margin-bottom: 10px !important
+    }
+
+    .about-section-two {
+        padding: 40px 0 20px
+    }
+
+    .developer-logo {
+        width: 65%
+    }
+
+    .home-detail {
+        top: 120px
+    }
+
+    .home-detail .inner .home-list {
+        margin-bottom: 10px;
+        padding-top: 10px
+    }
+
+    .home-detail .list-style-three li {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 5px
+    }
+
+    .home-detail .inner .home-list li span {
+        font-size: 16px;
+        margin-top: 3px
+    }
+
+    .rera-no {
+        margin-top: .5rem
+    }
+
+    .content-column .inner-box {
+        padding: 30px 30px 13px
+    }
+
+    .convenience-info-tabs .convenience-tabs .content {
+        padding: 10px 30px 20px
+    }
+
+    .convenience-info-tabs .convenience-tabs .tabs-content .text,
+    .convenience-info-tabs .convenience-tabs .tabs-content h3 {
+        margin-bottom: 10px
+    }
+
+    .list-style-three li {
+        font-size: 14px
+    }
+
+    .list-style-three li:before {
+        left: 5px;
+        font-size: 15px
+    }
+
+    .about-section-two .about-column .inner-column {
+        padding-left: 5px
+    }
+
+    a.navbar-brand {
+        width: 17%
+    }
+
+    .developer-logo-column {
+        width: 19%
+    }
+}
+
+@media(min-width:1367px) and (max-width:1460px) {
+    .home-detail {
+        top: 120px
+    }
+
+    .list-style-three li {
+        font-size: 14px
+    }
+}

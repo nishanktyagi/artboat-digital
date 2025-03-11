@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Ultimus </title>
+    <meta name="title" content="Divine Ultimus ">
+    <meta name="description" content="Divine Ultimus  - Discover our project features and offerings.">
+    <meta name="keywords" content="Divine Ultimus , real estate, projects, features">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN">
+    <meta name="allow-search" content="yes">
+    <meta name="revisit-after" content="daily">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta property="og:title" content="Divine Ultimus ">
+    <meta property="og:site_name" content="Divine Ultimus ">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Divine Ultimus  - Discover our project features and offerings.">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="http://example.com/assets/images/og-image.jpg"> -->
+    <meta property="og:image:alt" content="Divine Ultimus  project image">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" media="all">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" media="all">
+    <link rel="stylesheet" href="./assets/css/style.css" media="all">
+    <link rel="stylesheet" href="./assets/css/subhlabh.css" media="all">
+    <link rel="stylesheet" href="./assets/css/jquery.fancybox.min.css" media="all">
+    <link rel="stylesheet" href="./assets/css/responsives.css" media="all">
+    <link rel="stylesheet" href="./assets/css/bootstrap-v5.3.3.css" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="./assets/css/intlTelInput.css" media="all"> -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png">
+    <script>
+        function getAllParams() {
+            var vars = {};
+            const url = new URL(window.location.href);
+            for (let [key, value] of url.searchParams) {
+                vars[key] = value;
+            }
+            return vars;
+        }
+        var queryParams = getAllParams();
+    </script>
+
+</head>
+
+<body>
+
+    <section class="thank-you-page">
+        <div class="position-absolute text-center thank-you-container top-50 start-50">
+            <img src="./assets/images/project-logo.png" alt="" srcset="" class="thank-you-logo">
+            <h3 class="head-title mt-3">Thank You For Contacting Us</h3>
+            <h4>One of Our Executive will Contact You Soon.</h4>
+            <div class="brochure pt-3">
+                <a class="home-btn btn-style-one" href="index.html" style="text-align: center; margin-top: 20px">
+                    <i class="fa fa-home"></i>&nbsp; HOME </a>
+            </div>
+        </div>
+
+    </section>
+  
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.fancybox.js"></script>
+    <script src="./assets/js/bootstrap-v5.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/owl.js"></script>
+    <!-- <script src="./assets/js/intlTelInput.js"></script> -->
+    <script>
+        $('a').one('click', function (e) {
+            if (e.currentTarget.className != "nav-link") {
+                e.preventDefault();
+                if (window.location.href.indexOf('?') != -1) {
+                    this.href = this.href + "?" + window.location.href.slice(window.location.href.indexOf('?') + 1);
+                }
+                this.click();
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
