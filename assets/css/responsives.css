@@ -3,9 +3,13 @@
         font-size: 24px !important;
         font-weight: 600 !important
     }
-
+    .about-line {
+        font-size: 70px;
+        color: #7f5772;
+        line-height: 70px;
+    }
     .project-logo {
-        width: 50%
+        width: 191px;
     }
 
     .navbar-brand {
@@ -99,7 +103,7 @@
 
     .property-info {
         border-right: 0;
-        border-bottom: 1px solid #ff5100
+        border-bottom: 1px solid #7f5772
     }
 
     .convenience-section h2 {
@@ -140,10 +144,9 @@
         justify-content: space-between
     }
 
-    .gallery-section-two .sec-title {
-        padding: 1px 0 50px
-    }
-
+  .mmt-4,.mmy-4{
+    margin-top: 40px !important;
+  }
     #gallery {
         padding: 0
     }
@@ -191,7 +194,7 @@
     }
 
     .nav-item {
-        border-bottom: 1px solid #ff5100
+        border-bottom: 1px solid #7f5772
     }
 
     .navbar .nav-item>a {
@@ -216,7 +219,7 @@
     }
 
     .banner-form-title {
-        color: #ff5100;
+        color: #7f5772;
         font-size: 20px;
         text-transform: uppercase;
         font-weight: 800;
@@ -236,9 +239,9 @@
         padding: 11px 25px;
         line-height: 24px;
         text-transform: uppercase;
-        background: #ff5100;
+        background: #7f5772;
         color: #fff;
-        border: 1px solid #ff5100;
+        border: 1px solid #7f5772;
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 1px;
@@ -246,17 +249,16 @@
     }
 
     .banner-btn:hover {
-        color: #ff5100;
+        color: #7f5772;
         background-color: #fff;
-        border: 1px solid #ff5100
+        border: 1px solid #7f5772
     }
 
     .bottom-btn {
-        background-color: #ff5100;
+        background-color: #7f5772;
         color: #fff;
         padding: 12px 15px;
         width: 100%;
-        font-family: amagro;
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 1px
@@ -279,7 +281,7 @@
 
     .modal-title {
         font-size: 24px;
-        color: #ff5100;
+        color: #7f5772;
         text-transform: uppercase
     }
 
@@ -298,7 +300,7 @@
     }
 
     .border-right {
-        border-right: 1px solid #ff5100 !important
+        border-right: 1px solid #7f5772 !important
     }
 
     .plans-section .tabs-content .tab .image img {
@@ -308,7 +310,7 @@
     }
 
     .callnow-container {
-        background-color: #ff5100;
+        background-color: #7f5772;
         color: #fff;
         padding: 12px 15px;
         border-right: 1px solid #fff
@@ -350,21 +352,17 @@
     section.call-to-action-section.container-fluid.align-self-center {
         padding-top: 0 !important
     }
-
-  
-
-    .rera-no {
-        word-wrap: break-word;
-        padding: 0 10px
-    }
-
-    img.adobe-logo {
-        width: 85%;
-        margin-left: -15px
+    .about-first-col h1{
+        padding: 15px 13px 60px;
+        font-size: 56px;
     }
 }
 
 @media(min-width:992px) {
+    .about-first-col h1{
+        padding: 15px 80px;
+        font-size: 83px;
+    }
     a.navbar-brand {
         width: 19%
     }
@@ -388,16 +386,16 @@
     }
 
     .default-form .form-control::-moz-placeholder {
-        color: #fff;
+        color: #7f5772;
         opacity: 1
     }
 
     .default-form .form-control:-ms-input-placeholder {
-        color: #fff
+        color: #7f5772
     }
 
     .default-form .form-control::-webkit-input-placeholder {
-        color: #fff
+        color: #7f5772
     }
 
     .home-detail {
@@ -502,7 +500,7 @@
         font-size: 14px;
         margin-bottom: 15px;
         padding-left: 15px;
-        border-left: 5px solid #ff5100
+        border-left: 5px solid #7f5772
     }
 
     .plans-section .title-column .inner-column {

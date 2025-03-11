@@ -53,7 +53,7 @@
         <div class="container p-0">
             <nav id="navbar" class="navbar top-0 end-0 start-0 navbar-expand-lg navbar-light p-1">
                 <a class="navbar-brand p-0" href="index.html">
-                    <img src="./assets/images/project-logo.png" alt="project-logo" srcset="" class="project-logo">
+                    <img src="./assets/images/project-logo.jpeg" alt="project-logo" srcset="" class="project-logo">
                 </a>
 
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
@@ -72,20 +72,11 @@
                                     Us</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a href="#amenities" onclick="scroll_to_view('amenities')"
-                                class="nav-link"><strong>Amenities</strong></a>
+                            <a href="#amenities" onclick="scroll_to_view('serviceSection')"
+                                class="nav-link"><strong>Services</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a href="#floorplan" onclick="scroll_to_view('floorplan')" class="nav-link"><strong>Floor
-                                    Plan</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#location" onclick="scroll_to_view('location')"
-                                class="nav-link"><strong>Location</strong></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#contact" onclick="scroll_to_view('contact')" class="nav-link"><strong>Contact
+                            <a href="#contact" onclick="scroll_to_view('successStorySection')" class="nav-link"><strong>Contact
                                     Us</strong></a>
                         </li>
                     </ul>
@@ -95,52 +86,23 @@
     </section>
     <!-- navbar end  -->
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
-        data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
-        <section class="main-slider container position-relative p-0" id="home">
+        data-bs-smooth-scroll="true" class="scrollspy-example rounded-2" tabindex="0">
+        <section class="main-slider container position-relative" id="home">
             <div class="row align-items-center">
-            <div class="col-md-6 about-line">
-                Top Digital Marketing Agency in Noida
-                <div>
-                <button data-bs-toggle="modal" data-name="Schedule Site
-                    Visit" data-bs-target="#enquire-now"
-                        class="theme-btn sm-none btn-style-one enquireModal"><i class="fa fa-car"></i> Request a Quote</button>
-                    </div>
-            </div>
-            <div class="col-md-6">
-                <img src="assets/images/corporate_digital.webp" alt="">
-            </div>
-        </div>
-            <!-- <div class="main-slider-banner">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" data-interval="10000">
-                        <div class="item active">
-                            <img src="assets/images/banner-1.jpeg" alt="Artboat Digital  - banner"
-                                class="w-100 img-responsive">
-                        </div>
+                <div class="col-md-6 about-line">
+                    Top Digital Marketing Agency in Noida
+                    <div>
+                        <button data-bs-toggle="modal" data-name="Request A Quote" data-bs-target="#enquire-now"
+                            class="theme-btn sm-none btn-style-one enquireModal"> Request a
+                            Quote</button>
                     </div>
                 </div>
-            </div> -->
-            <!--  <div class="home-detail">
-            <div class="inner">
-                 <h3>
-                    Artboat Digital
-                </h3>
-                <div class="text">Ghatkopar (E), Mumbai</div>
-                <ul class="home-list">
-                    <li>CONFIGURATION <span>1, 2 & 2.5 BHK Premium Residences </span></li>
-                    <li>STARTING<span> ₹1.12 Cr.*  </span></li>
-                </ul> -->
-            <!-- <ul class="list-style-three col-md-12" style="text-align: left;">
-                    <li>Exclusive Benefits on Site Visit</li>
-                </ul> -->
-            <!-- <div class="price blinking">Pay 40% & Take Possession*</div> -->
-            <!-- <hr class="innerhr md-none"> -->
-            <div class="btns-box">
-                <!-- <button data-bs-toggle="modal" data-name="Schedule Site
-                    Visit" data-bs-target="#enquire-now"
-                        class="theme-btn sm-none btn-style-one enquireModal"><i class="fa fa-car"></i> Schedule Site
-                        Visit</button> -->
-                <!-- <div class="rera-no mb-2">Free Pickup and Drop</div> -->
+                <div class="col-md-6">
+                    <img src="assets/images/corporate_digital.webp" class="w-100" alt="">
+                </div>
+            </div>
+            <div class="btns-box mt-5">
+
                 <div class="container">
                     <div class="md-none banner-form-container">
                         <h4 class="banner-form-title" align="center">Enquire Now</h4>
@@ -168,7 +130,7 @@
                                 <input type="hidden" id="bannerDate" name="date">
                                 <input type="hidden" id="bannerTime" name="currentTime">
                             </div>
-                            <div class="banner-query-box text-center col-sm-12 col-xs-12">
+                            <div class="banner-query-box pb-5 text-center col-sm-12 col-xs-12">
                                 <button type="submit" class="button" id="contactus_banner">Submit</button>
                                 <button class="button d-none bannerbuttonload"><i
                                         class="fa fa-spinner fa-pulse"></i>Sending...
@@ -182,518 +144,195 @@
             </div>
         </div> -->
         </section>
-        <!--Property Info Section-->
-        <section class="property-info-section container">
-            <div class="row row-home-details clearfix icon-space">
-                <!--Property Info-->
-                <div class="property-info col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="inner">
-                        <div align="center"><img src="./assets/images/icons/icon-benefits.png"
-                                class="property-info-icon" alt=""></div>
-                        <div class="total"><strong>TYPE</strong></div>
-                        <div class="title">Residential & Commercial Plots </div>
-                    </div>
+        <hr class="md-none">
+        <section class="py-5  container-fluid" id="about">
+            <div class="row px-0">
+                <div class="col-md-4 text-center about-first-col">
+                    <h1> What we do? </h1>
                 </div>
-                <!--Property Info-->
-                <div class="property-info col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="inner">
-                        <div align="center"> <img src="./assets/images/icons/locatiion.png" class="property-info-icon"
-                                alt=""></div>
-                        <div class="total"><strong>LOCATION</strong></div>
-                        <div class="title">Vrindavan</div>
-                    </div>
+                <div class="col-md-4">
+                    <h2> Art Boat Digital</h2>
+                    <p>
+                        We Create Powerful Digital Experiences!
+                    </p>
+                    <p>
+                        At Art Boat Digital, we blend creativity, strategy, and technology to craft high-impact
+                        digital
+                        marketing solutions. Our expert team designs data-driven campaigns that engage audiences,
+                        elevate brands, and drive real results. Whether it’s social media, performance marketing, or
+                        brand storytelling, we develop tailored strategies that help your business thrive. Let’s
+                        make
+                        your brand shine in the digital wor
+                    </p>
                 </div>
-                <!--Property Info-->
-                <div class="property-info col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="inner">
-                        <div align="center"><img src="./assets/images/icons/money.png" class="property-info-icon"
-                                alt="">
-                        </div>
-                        <div class="total"><strong>PRICE</strong></div>
-                        <div class="price"> ₹12,50,000* Onwards</div>
-                    </div>
-                </div>
-                <!--Property Info-->
-                <!-- <div class="property-info col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                <div class="inner">
-                    <div align="center"><i class="fa fa-bed icons"></i></div>
-                    <div class="total"><strong>BEDROOMS</strong></div>
-                    <div class="price">1, 2 & 2.5</div>
-                </div>
-            </div> -->
-                <!--Property Info-->
-                <div class="property-info col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="inner">
-                        <div align="center"><img src="./assets/images/icons/icon-benefits04.png"
-                                class="property-info-icon" alt=""></div>
-                        <div class="total"><strong>CARPET AREA</strong></div>
-                        <div class="title"> Starting from 100 Sq.Yd.</div>
-                    </div>
-                </div>
-                <!--Property Info-->
-                <div class="property-info col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="inner">
-                        <div align="center"><img src="./assets/images/icons/icon-transparent.png"
-                                class="property-info-icon" alt=""></div>
-                        <div class="total"><strong>POSSESSION</strong></div>
-                        <div class="title">Ready to Buid</div>
-                    </div>
+                <div class="col-md-4">
+                    <h2> And More Digital</h2>
+                    <p>
+                        Crafting High-Performance Shopify Stores
+                    </p>
+                    <p>
+                        Your Shopify store should do more than just exist—it should sell, engage, and grow your
+                        business. At And More Digital, we specialize in custom Shopify development, building
+                        seamless and high-converting eCommerce experiences. From design to optimization, we ensure
+                        your store is visually stunning, fast, and scalable. Whether you need a new store or
+                        enhancements, we create solutions tailored for success. Let’s bring your vision to life!
+                    </p>
                 </div>
             </div>
         </section>
-
-        <!--About Section Two-->
-        <section class="about-section-two container" id="about">
-            <div class="content-column col-md-12 col-sm-12 col-xs-12">
-                <div class="innerColumn">
-                    <h1>
-                        Premium plots in gated townships at the holy city of VRINDAVAN
-                    </h1>
-                    <div class="text" align="justify">
-
-                        Welcome to Artboat Digital, your trusted partner in turning aspirations into reality and
-                        creating
-                        thriving communities. With a profound commitment to excellence, innovation, and integrity, we
-                        are a
-                        distinguished real estate developer specializing in crafting premium land plots within gated
-                        township projects. <br>
-                        Established in 1998, Artboat Digital specializes in residential and commercial projects &
-                        develpoments, driven by out motto of quality, commitment, honesty & reliablity. <br>
-                        Our strategically located projects near Jewar International Airport and in the serene vicinity
-                        of
-                        Vrindavan offer a harmonious blend of modern living and natural beauty.
-
-
-                    </div>
-                    <!-- <div class="text" align="justify"> 
-                    M3M, The Line sets the stage for a sophisticated and vibrant retail environment
-                    adorned with a world of amenities for a retail experience.
-                    </div> -->
-                    <button data-bs-toggle="modal" data-bs-target="#enquire-now"
-                        class="theme-btn btn-style-five enquireModal d-block m-auto" title="Brochure"
-                        data-name="Request Brochure"><i class="fa fa-download"></i> Request Brochure
-                    </button>
-                </div>
-            </div>
-            <div class="row mt-4 clearfix">
-
-                <!--Video Column-->
-                <div class="col-md-6 mobile-margin-top col-sm-12 col-xs-12 position-relative">
-                    <div class="itemDisplayImg">
-                        <div>
-                            <img src="./assets/images/5.jpg" class="w-100" />
-                        </div>
-                        <div class="itemDisplayPropName">
-                            Radha Krishna Puram (Phase 1,2 & 3)
-                        </div>
-                    </div>
-
-                    <div class="itemDisplayDetailLines row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <i class="fa fa-object-ungroup" aria-hidden="true"></i> 100 SQ. YD.
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><i class="fa fa-money" aria-hidden="true"></i>
-                            Rs.
-                            12,50,000</div>
-
-                    </div>
-                    <div class="itemDisplayDetailLines row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <i aria-hidden="true" class="fas fa-building"></i> &nbsp; Commercial &nbsp;&nbsp;
-                            <i aria-hidden="true" class="fas fa-home"></i> &nbsp; Residential
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><i class="fa fa-map-marker"
-                                aria-hidden="true"></i>
-                            Opposite Shriji Baba Law College, NH-2</div>
-
-                    </div>
-                    <div class="itemDisplayDetailLines row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><i class="fa fa-building-o"
-                                aria-hidden="true"></i>
-                            by Artboat Digital</div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <button data-bs-toggle="modal" data-bs-target="#enquire-now"
-                                class="theme-btn btn-style-five enquireModal" title="Brochure" data-name="Explore More">
-                                Explore More
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!--Content Column-->
-                <div class="col-md-6 mobile-margin-top col-sm-12 col-xs-12 position-relative">
-                    <div class="itemDisplayImg">
-                        <div>
-                            <img src="./assets/images/4.jpg" class="w-100" />
-                        </div>
-
-                        <div class="itemDisplayPropName">
-                            Shri Radha Krishna Vrindavan Dham (Phase 1,2 & 3)
-                        </div>
-                    </div>
-
-                    <div class="itemDisplayDetailLines row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <i class="fa fa-object-ungroup" aria-hidden="true"></i>
-                            <span data-bs-toggle="modal" data-bs-target="#enquire-now" class="theme-btn"
-                                title="Brochure" data-name="Size On Request"> &nbsp Size On Request
-                            </span>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <span data-bs-toggle="modal" data-bs-target="#enquire-now" class="theme-btn"
-                                title="Brochure" data-name="Price On Request"><i class="fa fa-money"
-                                    aria-hidden="true"></i> &nbsp Price On
-                                Request
-                            </span>
-                        </div>
-
-                    </div>
-                    <div class="itemDisplayDetailLines row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <i aria-hidden="true" class="fas fa-building"></i> &nbsp; Commercial &nbsp;&nbsp;
-                            <i aria-hidden="true" class="fas fa-home"></i> &nbsp; Residential
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><i class="fa fa-map-marker"
-                                aria-hidden="true"></i>
-                            Sunrakh VIP road, near Prem Mandir
-                        </div>
-
-                    </div>
-                    <div class="itemDisplayDetailLines row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><i class="fa fa-building-o"
-                                aria-hidden="true"></i>
-                            by Artboat Digital</div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <button data-bs-toggle="modal" data-bs-target="#enquire-now"
-                                class="theme-btn btn-style-five enquireModal" title="Brochure" data-name="Explore More">
-                                Explore More
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="container gallery-section-two">
+        <section class="container gallery-section-two" id="serviceSection">
             <div class="sec-title  text-center">
-                <h2 class="m-0 font-weight-bold">Why Invest in VRINDAVAN?</h2>
+                <h2 class="m-0 font-weight-bold pb-3">What is digital marketing: </h2>
             </div>
-
-            <div class="row">
+            <p class="text-center mb-5">
+                Digital marketing is the component of marketing that uses the Internet and online-based digital
+                technologies such as desktop computers, mobile phones, and other digital media and platforms to promote
+                products and services.
+                <br>
+                Digital marketing promotes products and services through channels such as websites, mobile devices, and
+                social media platforms.
+            </p>
+            <div class="row  mb-5 align-items-center">
                 <div class="col-lg-6 col-md-12">
-                    <img src="./assets/images/banner.jpg" class="w-100" alt="">
+                    <img src="./assets/images/WhatsApp Image 2025-03-01 at 9.09.12 PM.jpeg" class="w-100" alt="">
                 </div>
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 mmt-4 col-md-12">
+                    <h2>
+                        Traditional Marketing
+                    </h2>
                     <p class="mb-5">
-                        Investing in real estate property in <strong>Vrindavan</strong>, Uttar Pradesh presents a
-                        <strong>spiritually enriching and financially rewarding</strong> opportunity. Known as a revered
-                        holy land, Vrindavan offers a serene and spiritually uplifting environment, attracting devotees
-                        and
-                        tourists alike. This cultural significance ensures consistent demand for housing and
-                        accommodations,
-                        making it a <strong>promising destination for rental income or resale value</strong>. Embrace a
-                        harmonious lifestyle while tapping into a resilient real estate market in the heart of spiritual
-                        devotion. <br> <br>
-                        Along with ultra rapid infrastructure development, the city provides much-needed calmness
-                        tranquilly. Artboat Digital has multiple projects in Vrindavan.
+                        Form of marketing that uses offline media to reach an audience. Basic examples of traditional
+                        marketing include things like newspaper ads and other print ads, but there are also billboards,
+                        mail advertisements, and TV and radio advertisements.
                     </p>
                     <button data-bs-toggle="modal" data-bs-target="#enquire-now"
                         class="theme-btn btn-style-five enquireModal" title="Brochure" data-name="Know More"> Know More
                     </button>
                 </div>
             </div>
-        </section>
-        <section class="amenities container-fluid" id="amenities">
-            <div class="container">
-                <div class="sec-title  text-center">
-                    <h2 class="m-0 font-weight-bold">Our Amenities</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <h2>
+                        Digital Marketing
+                    </h2>
+                    <p class="mb-5">
+                        Two-way Communication: With digital marketing, organisations can interact with their audience,
+                        allow them to provide feedback and comments, and engage with the properly. <br>
+                        Online Channels: It uses online channels like websites, email, social media platforms, mobile
+                        apps, search engines, etc.
+                        Multimedia Content: It uses multimedia content like images, videos, infographics, etc., for user
+                        engagement across different online platforms.
+                        Cost: As compared to traditional marketing, digital marketing can be more cost-effective. It is
+                        because digital marketing usually includes low overhead cost and has more advertising options.
+                    </p>
+                    <button data-bs-toggle="modal" data-bs-target="#enquire-now"
+                        class="theme-btn btn-style-five enquireModal" title="Brochure" data-name="Know More"> Know More
+                    </button>
                 </div>
-                <div class="row">
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i aria-hidden="true" class="fab fa-wpforms"></i>
-                            </div>
-                            <div class="amenitiesText">
-                                IMMEDIATE <br> REGISTRY
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i aria-hidden="true" class="far fa-file-alt"></i>
-                            </div>
-                            <div class="amenitiesText">
-                                IMMEDIATE <br> MUTATION
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i aria-hidden="true" class="far fa-handshake"></i>
-                            </div>
-                            <div class="amenitiesText">IMMEDIATE <br> POSSESSION </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i class="fa-solid fa-indian-rupee-sign"></i>
-                            </div>
-                            <div class="amenitiesText">
-                                LOAN <br> FACILITY
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i aria-hidden="true" class="fas fa-city"></i>
-                            </div>
-                            <div class="amenitiesText">
-                                GATED <br>
-                                TOWNSHIP
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i aria-hidden="true" class="fas fa-bars"></i>
-                            </div>
-                            <div class="amenitiesText">
-                                BOUNDARY OF <br> TOWNSHIP
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i aria-hidden="true" class="fas fa-bolt"></i>
-                            </div>
-                            <div class="amenitiesText">
-                                ELECTRICITY <br> CONNECTION
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i aria-hidden="true" class="fas fa-road"></i>
-                            </div>
-                            <div class="amenitiesText">
-                                WIDE ROAD <br>
-                                FACILITY
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i aria-hidden="true" class="fas fa-water"></i>
-                            </div>
-                            <div class="amenitiesText">
-                                WATER <br> SUPPLY
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i aria-hidden="true" class="fas fa-tree"></i>
-                            </div>
-                            <div class="amenitiesText">
-                                TREE <br> PLANTATIONS
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i aria-hidden="true" class="fas fa-grip-lines-vertical"></i>
-                            </div>
-                            <div class="amenitiesText">
-                                DRAINAGE <br>
-                                FACILITY
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="amenitiesBox">
-                            <div class="amenitiesIcon">
-                                <i aria-hidden="true" class="far fa-thumbs-up"></i>
-                            </div>
-                            <div class="amenitiesText">AND MUCH <br> MUCH MORE...</div>
-                        </div>
-                    </div>
+                <div class="col-lg-6 mmy-4 col-md-12">
+                    <img src="./assets/images/WhatsApp Image 2025-03-01 at 9.09.14 PM.jpeg" class="w-100" alt="">
                 </div>
             </div>
         </section>
-
-        <section class="container-fluid" id="floorplan">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h2>
-                            Plots Details
-                        </h2>
-                        <p>
-                        <table style="width:100%">
-                            <tbody>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Size</th>
-                                    <th>Price</th>
-                                </tr>
-                                <tr>
-                                    <td>Radha Krishna Puram</td>
-                                    <td>100 SQ. YD.</td>
-                                    <td>Rs. 12,50,000</td>
-                                </tr>
-                                <tr>
-                                    <td> Shri Radha Krishna Vrindavan Dham</td>
-                                    <td><span data-bs-toggle="modal" data-bs-target="#enquire-now">On Request</span>
-                                    </td>
-                                    <td><span data-bs-toggle="modal" data-bs-target="#enquire-now">On Request</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </p>
-                    </div>
-                    <div class="col-md-6 position-relative">
-                        <img src="assets/images/price.jpeg" alt="" class="w-100"
-                            style="    filter: blur(5px); height: 500px;">
-                        <div class="tab-btns tab-buttons clearfix  floorplan-btn">
-                            <button href="" data-bs-toggle="modal" data-bs-target="#enquire-now"
-                                class="on-request-btn  theme-btn btn-style-three enquireModal" title="Floor Plan"
-                                data-name="Floor Plan on Request">Floor
-                                Plan On
-                                Request</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section class="video-section text-center" id="videoSection">
+            <video src="assets/images/WhatsApp Video 2025-03-01 at 9.09.15 PM.mp4" class="w-100" muted autoplay
+                controls></video>
         </section>
-
-        <section class="locationSection container-fluid" id="location">
-            <div class="row">
+        <section class="py-5 container text-center diffrenciate-section" id="diffrenciateSection">
+            <h2 class="m-0 font-weight-bold pb-5">
+                What's the Diffrence between Traditional Marketing and Digital Marketing
+            </h2>
+            <img src="assets/images/diffrence.png" alt="" class="w-100">
+        </section>
+        <section class="py-5 container text-center success-story-section" id="successStorySection">
+            <h2 class="m-0 font-weight-bold pb-3">
+                Success Story of Digital Marketing
+            </h2>
+            <p>
+                Digital marketing is necessary for all types of business and brand because audience never forget you.
+                There are many brands who increase their marketing through digital marketing.
+            </p>
+            <ul>
+                <li>
+                    Ikea: The digital marketing success story of a furniture brand
+                </li>
+                <li>
+                    Traveller Collective: A success story in digital marketing
+                </li>
+                <li>
+                    Dabur: A success story of digital marketing in India
+                </li>
+                <li>
+                    Vicks #TouchOfCare: An online marketing success story from India
+                </li>
+            </ul>
+            <div class="row pt-4">
                 <div class="col-md-6">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.484935830733!2d77.64634877611124!3d27.609493929799406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39736f8cd33d8c1f%3A0x351ca40c4da93e30!2sRadha%20Krishna%20Vrindavan%20Dham!5e0!3m2!1sen!2sin!4v1730200543858!5m2!1sen!2sin"
-                        width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <video src="assets/images/hire-us.mp4" class="w-100" muted autoplay controls></video>
                 </div>
-                <div class="col-md-6">
-                    <h2 class="locationHeading">Location Benefits</h2>
-                    <div class="location-text subheadline" align="justify">
-                        This project's prime location provides easy access to essential social infrastructure.
-                    </div>
-                    <div class="location-list row" align="justify">
-                        <ul class="list-style-three  col-md-12">
-                            <li>One of the nearest attractions is the famous Banke Bihari Ji Mandir.</li>
-                            <li>Prem Mandir is also close by, offering a serene place for worship and peace.</li>
-                            <li>The scenic Parikarma Marg lies within easy reach.</li>
-                            <li>You can visit the ISKCON Temple in Vrindavan, located nearby.</li>
-                            <li>The Chhata Industrial Area is conveniently accessible.</li>
-                            <li>Educational institutions and hubs are just around the corner.</li>
-                            <li>GLA University is situated a short distance away for higher education opportunities.
-                            </li>
-                            <li>There’s a Cricket & Sports Stadium in the vicinity for sports enthusiasts.</li>
-                            <li>Medical colleges are nearby, providing accessible healthcare and education.</li>
-                            <li>The market and daily amenities are within reach for all essential needs.</li>
-                            <li>Petrol pumps and garages are easily accessible for fuel and vehicle maintenance.</li>
-                            <li>Community centers and marriage halls are nearby for events and gatherings.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--Contact Section-->
-        <section class="contact-section" id="contact">
-            <div class="container-fluid">
-                <div class="row clearfix">
-                    <!--Info Column-->
-                    <div class="info-column col-md-4 col-sm-12 col-xs-12">
-                        <div class="inner-column wow fadeInLeft">
-                            <h2>Location Details</h2>
-                            <ul>
-                                <li><span>Address</span>E-22, Jawahar Park, Behind Hira Sweets, Laxmi Nagar.
-                                    New Delhi - 110092</li>
-                                <li><span>Email</span>care.shubhlabhgroup@gmail.com </li>
-                                <li><span>Phone</span>+91 95608 27029
-                                </li>
-                                <li><span>Working Hours</span>All Days <br> 10:00 AM - 06:00 PM</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--Form Column-->
-                    <div class="form-column col-md-8 col-sm-12 col-xs-12">
-                        <div class="inner-column">
-                            <h2>Leave Your Details Here</h2>
-                            <!--Default Form-->
-                            <div class="default-form">
-                                <form id="side_form">
-                                    <div class="row clearfix">
-                                        <div class="form-group col-md-6 col-sm-6 co-xs-12">
-                                            <input type="text" name="name" class="form-control" placeholder="Name*"
-                                                id="side_name" autocomplete="off" oninput="modalInput()" />
-                                            <span id="sideerror_name" class="error-side">Please Enter Your
-                                                Name</span>
-                                        </div>
-                                        <div class="form-group col-md-6 col-sm-12 co-xs-12">
-                                            <div style="display: flex;">
-                                                <input type="text" class="form-control" value="+91" disabled
-                                                    style="width: 75px;color: #fff;">
-                                                <input type="text" class="form-control" name="number"
-                                                    placeholder="Mobile*" id="side_phone" autocomplete="off"
-                                                    maxlength="10" minlength="10" oninput="sideInput()"
-                                                    onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g, '')" />
-                                            </div>
-                                            <span id="sideerror_mobile" class="error-side">Please Enter
-                                                Number</span>
-                                            <span id="recorderror_side" class="error-side"></span>
-                                        </div>
-                                        <div class="form-group col-md-12 col-sm-12 co-xs-12">
-                                            <input type="text" name="email" class="form-control" placeholder="Email ID"
-                                                id="side_email" autocomplete="off" />
-                                            <span id="sideerror_email" class="error-side">Please Enter Valid Email
-                                                Address</span>
-                                        </div>
-                                        <div class="form-group col-md-12 col-sm-12 co-xs-12">
-                                            <input type="text" name="message" class="form-control" id="side_msg"
-                                                placeholder="Message" autocomplete="off" />
-
-                                            <input type="hidden" id="currentDate" name="date">
-                                        </div>
-                                        <div class="side-query-box"
-                                            style="display: flex; align-items: center; margin-top: 5px; margin-bottom: 30px;">
-                                            <input class="" type="checkbox" id="side_checkbox" value="value" checked=""
-                                                onclick="sideInput()">
-                                            <div class="terms-and-condition-block position-relative w-100">
-                                                <label for="side_checkbox" class="sidecondition-label"> Terms and
-                                                    conditions</label>
-                                                <label class="sidecheck-box" for="side_checkbox"
-                                                    style="display: none; position: absolute; transition: all 1.5s ease 0s;">By
-                                                    clicking on submit you authorize Subhlabh Group to get in touch with
-                                                    you
-                                                    over a
-                                                    call, SMS, E-mail, Whatsapp or any other communication
-                                                    channel.</label><br>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 co-xs-12 text-center">
-                                            <button type="submit" class="btn-style-one" id="contactus_side"
-                                                disabled>SUBMIT</button>
-                                            <button type="button"
-                                                class="btn-style-one sidebuttonload d-none">SENDING...</button>
-                                        </div>
+                <div class="col-md-6 mmt-4">
+                    <h2>
+                        Hire Us
+                    </h2>
+                    <p>
+                        We Provide Digital Marketing Solution for Your Business and develop E-commerce Store according
+                        your need.
+                    </p>
+                    <p>
+                        Please Leave Your details here we Will contact you soon.
+                    </p>
+                    <div class="default-form">
+                        <div id="side_form">
+                            <div class="row clearfix">
+                                <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                    <input type="text" name="name" class="form-control" placeholder="Name*"
+                                        id="side_name" autocomplete="off" />
+                                    <span id="sideerror_name" class="error-side">Please Enter Your
+                                        Name</span>
+                                </div>
+                                <div class="form-group col-md-6 col-sm-12 co-xs-12">
+                                    <div style="display: flex;">
+                                        <input type="text" class="form-control" value="+91" disabled
+                                            style="width: 75px;color: #7f5772;">
+                                        <input type="text" class="form-control" name="mobile" placeholder="Mobile*"
+                                            id="side_phone" autocomplete="off" maxlength="10" minlength="10"
+                                            onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g, '')" />
                                     </div>
-                                </form>
+                                    <span id="sideerror_mobile" class="error-side">Please Enter
+                                        Number</span>
+                                    <span id="recorderror_side" class="error-side"></span>
+                                </div>
+                                <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                    <input type="text" name="email" class="form-control" placeholder="Email ID"
+                                        id="side_email" autocomplete="off" />
+                                    <span id="sideerror_email" class="error-side">Please Enter Valid Email
+                                        Address</span>
+                                </div>
+                                <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                    <input type="text" name="query" class="form-control" id="side_msg"
+                                        placeholder="Message" autocomplete="off" />
+                                </div>
+                                <div class="side-query-box"
+                                    style="display: flex; align-items: center; margin-top: 5px; margin-bottom: 30px;">
+                                    <input class="" type="checkbox" id="side_checkbox" value="value" checked=""
+                                        onclick="sideInput()">
+                                    <div class="terms-and-condition-block position-relative text-start w-100">
+                                        <label for="side_checkbox" class="sidecondition-label"> Terms and
+                                            conditions</label>
+                                        <label class="sidecheck-box" for="side_checkbox"
+                                            style="display: none; position: absolute; transition: all 1.5s ease 0s;">By
+                                            clicking on submit you authorize us to get in touch with you over a
+                                            call, SMS, E-mail, Whatsapp or any other communication
+                                            channel.</label><br>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 co-xs-12 text-center">
+                                    <button type="button" class="btn-style-one" id="contactus_side"
+                                        disabled>SUBMIT</button>
+                                    <button type="button"
+                                        class="btn-style-one sidebuttonload d-none">SENDING...</button>
+                                </div>
                             </div>
-                            <!--End Default Form-->
                         </div>
                     </div>
                 </div>
@@ -710,7 +349,7 @@
                         <form id="modal_form" class="row">
                             <div class="form-group col-md-6">
                                 <input type="text" name="name" class="form-control" placeholder="Name*" id="modal_name"
-                                    autocomplete="off" oninput="modalInput()" />
+                                    autocomplete="off" />
                                 <span id="modalerror_name" class="error-modal">Please Enter Your Name</span>
                             </div>
                             <div class="form-group col-md-6">
@@ -719,7 +358,6 @@
                                         style="width: 25%;">
                                     <input type="text" class="form-control" name="number" placeholder="Mobile No*"
                                         id="modal_phone" autocomplete="off" maxlength="10" minlength="10"
-                                        oninput="modalInput()"
                                         onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g, '')" />
                                 </div>
                                 <span id="modalerror_mobile" class="error-modal">Please Enter Number</span>
@@ -766,10 +404,11 @@
             <div class="footer-bottom">
                 <div class="row clearfix">
                     <div class="column col-md-12 col-sm-12 col-xs-12">
-                        <div class="copyright text-center"><a href="privacy-policy.html" class="text-light">Disclaimer
-                                and
-                                Privacy
-                                Policy</a></div>
+                        <div class="copyright text-center">
+                            <a href="privacy-policy.html" class="text-light">
+                                Disclaimer and Privacy Policy
+                            </a>&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;<a href="terms-of-service.html">Terms of Service</a>
+                        </div>
                     </div>
                     <!-- <div class="col-md-1 md-none mobie-qr-code">
                     <img src="./assets/images/qrcode.png" alt="Artboat Digital  qr-code" width="50%"

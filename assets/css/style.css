@@ -26,9 +26,12 @@ h6 {
     margin: 0;
     background: 0 0;
     line-height: 1.6em;
+    color: #7f5772 !important;
     font-family: montserrat, sans-serif !important
 }
-
+a{
+    color: #7f5772 !important;
+}
 body {
     font-family: lato, sans-serif !important;
     font-size: 14px;
@@ -164,7 +167,7 @@ li {
 }
 
 .project-logo {
-    width: 35%
+    width: 100%
 }
 
 .navbar .nav-item>a {
@@ -177,10 +180,10 @@ li {
     font-weight: 500;
     color: #222;
     cursor: pointer
-}
+}  
 
 .navbar .nav-link.active {
-    color: #ff5100 !important;
+    color: #7f5772 !important;
     background-color: #fff !important;
 }
 
@@ -189,7 +192,7 @@ li {
 }
 
 .home-detail .inner h3 {
-    background-image: linear-gradient(-225deg, #ff5100 0%, #ff5100 29%, #ff5100 67%, #ff5100 100%);
+    background-image: linear-gradient(-225deg, #7f5772 0%, #7f5772 29%, #7f5772 67%, #7f5772 100%);
     background-size: 200% auto;
     background-clip: text;
     text-transform: uppercase;
@@ -216,7 +219,7 @@ li {
 
 .home-detail .inner .home-list li {
     position: relative;
-    color: #ff5100;
+    color: #7f5772;
     font-size: 14px;
     font-weight: 700;
     text-align: center;
@@ -255,7 +258,7 @@ li {
     content: "\f00c";
     left: 0;
     top: 0;
-    color: #ff5100;
+    color: #7f5772;
     font-size: 18px;
     font-weight: 400;
     font-family: fontawesome
@@ -311,7 +314,7 @@ li {
 
 .icons {
     font-size: 45px;
-    color: #ff5100;
+    color: #7f5772;
     padding: 0 0 32px;
     line-height: normal
 }
@@ -339,20 +342,20 @@ li {
     padding: 11px 26px 10px;
     line-height: 24px;
     text-transform: uppercase;
-    background: linear-gradient(90deg, #ff5100, #ff5100);
+    background: linear-gradient(90deg, #7f5772, #7f5772);
     color: #fff;
     border: none;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 2px;
     font-family: montserrat, sans-serif !important;
-    border: 1px solid #ff5100
+    border: 1px solid #7f5772
 }
 
 .btn-style-one:hover {
     background: 0 0;
-    border: 1px solid #ff5100;
-    color: #ff5100
+    border: 1px solid #7f5772;
+    color: #7f5772
 }
 
 .convenience-section {
@@ -418,7 +421,7 @@ li {
 
 .convenience-info-tabs .convenience-tabs .tab-btns .tab-btn.active-btn {
     color: #fff;
-    background: linear-gradient(90deg, #ff5100, #ff5100);
+    background: linear-gradient(90deg, #7f5772, #7f5772);
     padding: 23px 15px;
     text-align: center;
     font-family: montserrat, sans-serif !important;
@@ -476,10 +479,6 @@ li {
     box-shadow: 5px 10px 18px 2px #00000042
 }
 
-.gallery-section-two .sec-title {
-    padding: 60px 0
-}
-
 .gallery-section-two .sec-title h2 {
     font-weight: 600;
     font-size: 36px
@@ -494,7 +493,7 @@ li {
 .gallery-block-two .image-box {
     position: relative;
     display: block;
-    border: 1px solid #ff5100;
+    border: 1px solid #7f5772;
     margin: 0
 }
 
@@ -556,7 +555,7 @@ li {
     line-height: 40px;
     font-weight: 700;
     display: inline-block;
-    background-color: #ff5100;
+    background-color: #7f5772;
     transition: all 300ms ease;
     -webkit-transition: all 300ms ease;
     -ms-transition: all 300ms ease;
@@ -570,7 +569,7 @@ li {
     right: -15px;
     bottom: -15px;
     top: -15px;
-    border: 1px solid #ff5100
+    border: 1px solid #7f5772
 }
 
 .gallery-block-two .inner-box:hover .overlay-box {
@@ -583,7 +582,7 @@ li {
 }
 
 .gallery-block-two .overlay-inner .link:hover {
-    color: #ff5100;
+    color: #7f5772;
     background-color: #fff
 }
 
@@ -652,7 +651,7 @@ li {
 table,
 th,
 td {
-    border: 1px solid #ff5100 !important;
+    border: 1px solid #7f5772 !important;
     text-align: center;
     padding: 4px;
     /* color: #fff */
@@ -663,7 +662,7 @@ td {
     padding: 11px 26px 10px;
     line-height: 24px;
     text-transform: uppercase;
-    background: linear-gradient(90deg, #ff5100, #ff5100);
+    background: linear-gradient(90deg, #7f5772, #7f5772);
     color: #fff;
     border: none;
     text-decoration: none;
@@ -671,13 +670,13 @@ td {
     font-weight: 600;
     letter-spacing: 2px;
     font-family: montserrat, sans-serif !important;
-    border: 1px solid #ff5100
+    border: 1px solid #7f5772
 }
 
 .btn-style-one:hover {
     background: 0 0;
-    border: 1px solid #ff5100;
-    color: #ff5100
+    border: 1px solid #7f5772;
+    color: #7f5772
 }
 
 .btn-style-two {
@@ -686,8 +685,8 @@ td {
     line-height: 24px;
     text-transform: uppercase;
     background: 0 0;
-    color: #ff5100;
-    border: 1px solid #ff5100;
+    color: #7f5772;
+    border: 1px solid #7f5772;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -695,7 +694,7 @@ td {
 }
 
 .btn-style-two:hover {
-    background: #ff5100;
+    background: #7f5772;
     color: #fff
 }
 
@@ -704,9 +703,9 @@ td {
     padding: 11px 25px;
     line-height: 24px;
     text-transform: uppercase;
-    background: #ff5100;
+    background: #7f5772;
     color: #fff;
-    border: 1px solid #ff5100;
+    border: 1px solid #7f5772;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -716,7 +715,7 @@ td {
 .btn-style-three:hover {
     background: 0 0;
     color: #fff;
-    border-color: #ff5100
+    border-color: #7f5772
 }
 
 .call-to-action-section .btn-column .theme-btn {
@@ -779,7 +778,7 @@ td {
     line-height: 1.2em;
     margin-bottom: 28px;
     padding-left: 28px;
-    border-left: 6px solid #ff5100
+    border-left: 6px solid #7f5772
 }
 
 #location .content-column .inner-box {
@@ -819,7 +818,7 @@ td {
     width: 100%;
     height: 100%;
     display: block;
-    background-color: #ff51008f;
+    background-color: #7f57728f;
 }
 
 .contact-section .info-column {
@@ -830,7 +829,7 @@ td {
 .contact-section .info-column .inner-column {
     position: relative;
     padding: 50px 50px 30px;
-    background-color: #ff510096;
+    background-color: #7f577296;
 }
 
 .contact-section .form-column .inner-column {
@@ -870,9 +869,9 @@ td {
     transition: all 300ms ease;
     -ms-transition: all 300ms ease;
     -webkit-transition: all 300ms ease;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #7f5772;
     font-weight: 600;
-    color: #fff
+    color: #7f5772
 }
 
 .contact-section {
@@ -885,7 +884,7 @@ td {
 }
 
 .contact-section .info-column .inner-column h2 {
-    color: #fff;
+    color: #7f5772;
     font-size: 28px;
     font-weight: 600;
     line-height: 1.4em;
@@ -894,7 +893,7 @@ td {
 
 .contact-section .info-column ul li {
     position: relative;
-    color: #fff;
+    color: #7f5772;
     font-size: 16px;
     margin-bottom: 22px
 }
@@ -902,7 +901,7 @@ td {
 .contact-section .info-column ul li span {
     position: relative;
     font-weight: 500;
-    color: #fff;
+    color: #7f5772;
     display: block;
     margin-bottom: 6px;
     font-family: montserrat, sans-serif !important
@@ -922,7 +921,7 @@ td {
 .main-footer .footer-bottom {
     position: relative;
     padding: 20px 50px;
-    background-color: #ff5100;
+    background-color: #7f5772;
     /* margin-bottom: 90px */
 }
 
@@ -976,9 +975,9 @@ td {
     font-family: lato;
     text-transform: uppercase;
     cursor: pointer;
-    background: linear-gradient(90deg, #ff5100, #ff5100);
+    background: linear-gradient(90deg, #7f5772, #7f5772);
     color: #fff;
-    border: 1px solid #ff5100;
+    border: 1px solid #7f5772;
     text-align: center;
     line-height: 35px
 }
@@ -1005,7 +1004,7 @@ td {
 
 .main-footer .footer-bottom .copyright a {
     position: relative;
-    color: #fff;
+    color: #fff !important;
     font-size: 12px;
     text-decoration: none
 }
@@ -1015,14 +1014,14 @@ td {
 }
 
 .form-control:focus {
-    border-color: #ff5100 !important;
+    border-color: #7f5772 !important;
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px #ff5100, 0 0 8px #ff5100 !important;
-    box-shadow: inset 0 1px 1px #ff5100, 0 0 8px #ff5100 !important
+    -webkit-box-shadow: inset 0 1px 1px #7f5772, 0 0 8px #7f5772 !important;
+    box-shadow: inset 0 1px 1px #7f5772, 0 0 8px #7f5772 !important
 }
 
 .default-form input::placeholder {
-    color: #fff
+    color: #7f5772
 }
 
 input:disabled {
@@ -1051,7 +1050,7 @@ input:disabled {
 }
 
 .button {
-    background-color: #ff5100;
+    background-color: #7f5772;
     border: none;
     color: #fff;
     padding: 15px 32px;
@@ -1104,8 +1103,8 @@ input:disabled {
     line-height: 24px;
     text-transform: uppercase;
     background: 0 0;
-    color: #ff5100;
-    border: 1px solid #ff5100;
+    color: #7f5772;
+    border: 1px solid #7f5772;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1113,9 +1112,9 @@ input:disabled {
 }
 
 .btn-style-five:hover {
-    background: #ff5100;
+    background: #7f5772;
     color: #fff;
-    border-color: #ff5100
+    border-color: #7f5772
 }
 
 .thank-you-container {
@@ -1148,7 +1147,7 @@ input:disabled {
     left: 0;
     top: 40%;
     width: 30px;
-    background: #ff5100 !important
+    background: #7f5772 !important
 }
 
 .gallerycarousel .owl-next {
@@ -1156,7 +1155,7 @@ input:disabled {
     right: 0;
     top: 40%;
     width: 30px;
-    background: #ff5100 !important
+    background: #7f5772 !important;
 }
 
 .check-box,
@@ -1183,12 +1182,12 @@ input:disabled {
     }
 
     100% {
-        border: 2px solid #ff5100
+        border: 2px solid #7f5772
     }
 }
 
 input[type=checkbox] {
-    accent-color: #ff5100;
+    accent-color: #7f5772;
     margin-right: 10px
 }
 
@@ -1200,7 +1199,7 @@ input#side_checkbox,
 }
 
 .sidecondition-label {
-    color: #fff
+    color: #7f5772
 }
 
 button:disabled {
@@ -1215,12 +1214,12 @@ button:disabled {
 }
 
 td span {
-    color: #ff5100;
+    color: #7f5772;
     cursor: pointer
 }
 
 td span:hover {
-    color: #ff5100;
+    color: #7f5772;
     cursor: pointer
 }
 
@@ -1260,12 +1259,12 @@ td span:hover {
 .modal-title {
     text-transform: uppercase;
     font-weight: 700;
-    color: #ff5100
+    color: #7f5772
 }
 #home{
     margin-top: 95px;
 }
 .about-line{
     font-size: 73px;
-    color: #ff5100;
+    color: #7f5772;
 }
