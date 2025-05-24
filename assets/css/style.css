@@ -663,7 +663,7 @@ td {
     line-height: 24px;
     text-transform: uppercase;
     background: linear-gradient(90deg, #7f5772, #7f5772);
-    color: #fff;
+    color: #fff !important;
     border: none;
     text-decoration: none;
     font-size: 14px;
