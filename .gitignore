@@ -1,0 +1,28 @@
+# Node modules and build outputs
+node_modules/
+dist/
+
+# Lockfiles
+package-lock.json
+pnpm-lock.yaml
+
+# Vite cache
+.vite/
+
+# Editor and system files
+.DS_Store
+*.log
+.idea/
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Optional npm cache files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+coverage/
