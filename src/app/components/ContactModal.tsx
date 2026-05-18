@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Send } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -17,21 +17,99 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     message: '',
   });
 
+  const phoneInputRef = useRef<HTMLInputElement | null>(null);
+  const itiRef = useRef<any>(null);
+  const [formMsg, setFormMsg] = useState<{ text: string; type: 'success' | 'error' | '' ; visible: boolean }>({ text: '', type: '', visible: false });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    // Initialize intl-tel-input when modal opens so the input is visible
+    if (!isOpen) return;
+    const win = window as any;
+
+    const tryInit = () => {
+      if (phoneInputRef.current && win.intlTelInput) {
+        // Delay initialization slightly to ensure modal is painted and CSS applied
+        setTimeout(() => {
+          try {
+            if (itiRef.current) {
+              try { itiRef.current.destroy(); } catch (e) {}
+              itiRef.current = null;
+            }
+            itiRef.current = win.intlTelInput(phoneInputRef.current, {
+              initialCountry: 'in',
+              separateDialCode: true,
+              utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js',
+            });
+            // force redraw of flags
+            window.dispatchEvent(new Event('resize'));
+          } catch (e) {
+            // swallow
+          }
+        }, 150);
+      }
+    };
+
+    if (typeof win.intlTelInput === 'undefined') {
+      const id = setInterval(() => {
+        tryInit();
+        if (win.intlTelInput) clearInterval(id);
+      }, 200);
+      return () => clearInterval(id);
+    }
+
+    tryInit();
+  }, [isOpen]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-    // After successful submission, you can close the modal
-    onClose();
-    // Reset form
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      message: '',
-    });
+    if (formData.fullName.trim() === '') {
+      setFormMsg({ text: 'Please enter your name.', type: 'error', visible: true });
+      return;
+    }
+
+    let mobileNumber = '';
+    if (itiRef.current) {
+      try {
+        if (formData.phone && !itiRef.current.isValidNumber()) {
+          setFormMsg({ text: 'Invalid mobile number.', type: 'error', visible: true });
+          return;
+        }
+        mobileNumber = itiRef.current.getNumber();
+      } catch (err) {
+        mobileNumber = formData.phone || '';
+      }
+    } else {
+      mobileNumber = formData.phone || '';
+    }
+
+    setIsSubmitting(true);
+
+    const payload = new FormData();
+    payload.append('name', formData.fullName);
+    payload.append('mobile', mobileNumber);
+    payload.append('email', formData.email);
+    payload.append('company', formData.company);
+    payload.append('service', formData.service);
+    payload.append('message', formData.message);
+
+    const submitUrl = 'https://script.google.com/macros/s/AKfycbwJx5KNzBKEP7DeyKZWHp7qoUQHL966vIZeSlg9tVnZkBiSc-foER95ywehmedBUxWs/exec';
+
+    fetch(submitUrl, { method: 'POST', body: payload })
+      .then(() => {
+        setFormMsg({ text: 'Thanks — your message was sent.', type: 'success', visible: true });
+        setFormData({ fullName: '', email: '', phone: '', company: '', service: '', message: '' });
+        // close modal shortly after success
+        setTimeout(() => {
+          setFormMsg({ text: '', type: '', visible: false });
+          setIsSubmitting(false);
+          onClose();
+        }, 1600);
+      })
+      .catch(() => {
+        setFormMsg({ text: 'There was an error sending your message. Please try again later.', type: 'error', visible: true });
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -110,8 +188,9 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       Phone Number
                     </label>
                     <input
+                      ref={phoneInputRef}
                       type="tel"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="Enter your phone number"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -167,18 +246,33 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02, boxShadow: '0 20px 25px -5px rgba(147, 51, 234, 0.4)' }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 group"
+                  disabled={isSubmitting}
+                  whileHover={!isSubmitting ? { scale: 1.02, boxShadow: '0 20px 25px -5px rgba(147, 51, 234, 0.4)' } : {}}
+                  whileTap={!isSubmitting ? { scale: 0.98 } : {}}
+                  className={`w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 group ${isSubmitting ? 'opacity-60 cursor-not-allowed' : ''}`}
                 >
-                  Send Message
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    <Send size={20} className="group-hover:rotate-45 transition-transform" />
-                  </motion.div>
+                  {isSubmitting ? (
+                    <>
+                      <span className="animate-spin inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full"></span>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <motion.div
+                        animate={{ x: [0, 5, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                      >
+                        <Send size={20} className="group-hover:rotate-45 transition-transform" />
+                      </motion.div>
+                    </>
+                  )}
                 </motion.button>
+                {formMsg.visible && (
+                  <div className={`mt-4 p-3 rounded-md text-sm ${formMsg.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
+                    {formMsg.text}
+                  </div>
+                )}
               </form>
             </motion.div>
           </div>

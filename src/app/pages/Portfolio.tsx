@@ -86,7 +86,7 @@ export function Portfolio() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-600 via-purple-500 to-blue-600 text-white py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-purple-600 via-purple-500 to-blue-600 text-white py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -97,7 +97,7 @@ export function Portfolio() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6"
           >
             Shopify Stores We've Launched, Grown & Scaled
           </motion.h1>
@@ -105,7 +105,7 @@ export function Portfolio() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-purple-100 max-w-3xl mx-auto"
+            className="text-sm sm:text-base md:text-2xl text-purple-100 max-w-3xl mx-auto px-2"
           >
             Real brands. Real markets. Real results — across Asia, LATAM, Africa, and the Middle East.
           </motion.p>
@@ -113,16 +113,16 @@ export function Portfolio() {
       </section>
 
       {/* Filter Section */}
-      <section className="py-12 bg-white border-b sticky top-16 z-10 shadow-sm">
+      <section className="py-8 md:py-12 bg-white border-b sticky top-16 z-10 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex gap-2 md:gap-4 overflow-x-auto md:overflow-visible md:flex-wrap md:justify-center pb-2 md:pb-0">
             {categories.map((category) => (
               <motion.button
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`px-6 py-3 rounded-full border-2 transition-all font-semibold ${
+                className={`px-4 md:px-6 py-2 md:py-3 rounded-full border-2 transition-all font-semibold text-sm md:text-base whitespace-nowrap flex-shrink-0 md:flex-shrink ${
                   activeCategory === category
                     ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white border-transparent shadow-lg'
                     : 'border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white'
@@ -136,14 +136,14 @@ export function Portfolio() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 bg-gray-50 min-h-screen">
+      <section className="py-16 md:py-20 bg-gray-50 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center mb-8"
+            className="text-center mb-8 md:mb-12"
           >
-            <p className="text-lg text-gray-600">
+            <p className="text-base md:text-lg text-gray-600">
               Showing <span className="font-bold text-purple-600">{filteredProjects.length}</span> {activeCategory === 'All' ? 'projects' : `${activeCategory} projects`}
             </p>
           </motion.div>
@@ -155,7 +155,7 @@ export function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
             >
               {filteredProjects.map((project, index) => (
               <motion.div
@@ -169,7 +169,7 @@ export function Portfolio() {
                 className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all"
               >
                 {/* Project Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-48 md:h-64 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -179,24 +179,24 @@ export function Portfolio() {
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 shadow-xl"
+                      className="bg-white text-purple-600 px-5 md:px-6 py-2 md:py-3 rounded-lg font-semibold flex items-center gap-2 shadow-xl text-sm md:text-base"
                     >
                       View Project <ExternalLink size={18} />
                     </motion.button>
                   </div>
                   {/* Category Badge */}
-                  <div className={`absolute top-4 left-4 bg-gradient-to-r ${project.color} text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2`}>
+                  <div className={`absolute top-3 md:top-4 left-3 md:left-4 bg-gradient-to-r ${project.color} text-white px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium flex items-center gap-2`}>
                     {project.icon}
-                    {project.category}
+                    <span className="hidden sm:inline">{project.category}</span>
                   </div>
                 </div>
 
                 {/* Project Details */}
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold mb-3 text-gray-900 group-hover:text-purple-600 transition-colors">
+                <div className="p-4 md:p-6">
+                  <h3 className="text-lg md:text-2xl font-semibold mb-2 md:mb-3 text-gray-900 group-hover:text-purple-600 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                     {project.description}
                   </p>
                   
@@ -205,7 +205,7 @@ export function Portfolio() {
                     {project.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm"
+                        className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs md:text-sm"
                       >
                         {tag}
                       </span>
@@ -223,16 +223,16 @@ export function Portfolio() {
               animate={{ opacity: 1 }}
               className="text-center py-20"
             >
-              <p className="text-2xl text-gray-500">No projects found in this category</p>
+              <p className="text-lg md:text-2xl text-gray-500">No projects found in this category</p>
             </motion.div>
           )}
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-600 to-blue-600 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-purple-600 to-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
               { number: '150+', label: 'Projects Completed' },
               { number: '98%', label: 'Client Satisfaction' },
@@ -247,8 +247,8 @@ export function Portfolio() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
-                <div className="text-purple-100">{stat.label}</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
+                <div className="text-xs sm:text-sm md:text-base text-purple-100">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -256,13 +256,13 @@ export function Portfolio() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"
+            className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-gray-900"
           >
             Ready to Start Your Project?
           </motion.h2>
@@ -271,7 +271,7 @@ export function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-gray-600 mb-8"
+            className="text-sm sm:text-base md:text-xl text-gray-600 mb-6 md:mb-8"
           >
             Let's build your Shopify success story together
           </motion.p>
@@ -285,7 +285,7 @@ export function Portfolio() {
               onClick={() => setIsModalOpen(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-2xl transition-all"
+              className="inline-block bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:shadow-2xl transition-all text-sm md:text-base"
             >
               Get Free Shopify Audit
             </motion.button>

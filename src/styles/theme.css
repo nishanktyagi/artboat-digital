@@ -179,3 +179,8 @@
     line-height: 1.5;
   }
 }
+@media (max-width:767px) {
+  body,section{
+    overflow-x: clip !important;
+  }
+}

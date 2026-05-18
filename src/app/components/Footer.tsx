@@ -25,18 +25,18 @@ export function Footer({ setCurrentPage }: FooterProps) {
               Navigate your brand to success with creative digital marketing solutions that make waves in your industry.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="hover:text-purple-300 transition-colors">
+              <a href="https://www.facebook.com/share/1E4KpM5hnR/" className="hover:text-purple-300 transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-purple-300 transition-colors">
+              {/* <a href="#" className="hover:text-purple-300 transition-colors">
                 <Twitter size={20} />
-              </a>
-              <a href="#" className="hover:text-purple-300 transition-colors">
+              </a> */}
+              <a href="https://www.instagram.com/artboatdigital/" className="hover:text-purple-300 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:text-purple-300 transition-colors">
+              {/* <a href="#" className="hover:text-purple-300 transition-colors">
                 <Linkedin size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -91,15 +91,15 @@ export function Footer({ setCurrentPage }: FooterProps) {
             <ul className="space-y-3 text-purple-200">
               <li className="flex items-start gap-2">
                 <MapPin size={20} className="mt-1 flex-shrink-0" />
-                <span>123 Creative Street, Design District, DD 12345</span>
+                <span>WeWork Galaxy Business Park, Sector 62, A-44, Sushil Marg, Block A, Industrial Area, Noida, UP 201309</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={20} className="flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 6393754583</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={20} className="flex-shrink-0" />
-                <span>hello@artboat.digital</span>
+                <span>artboatdigital@gmail.com</span>
               </li>
             </ul>
           </div>

@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { MapPin, Phone, Mail, Clock, MessageCircle, Calendar, CheckCircle, Send } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -12,10 +12,86 @@ export function Contact() {
     message: '',
   });
 
+  const phoneInputRef = useRef<HTMLInputElement | null>(null);
+  const itiRef = useRef<any>(null);
+  const [formMsg, setFormMsg] = useState<{ text: string; type: 'success' | 'error' | '' ; visible: boolean }>({ text: '', type: '', visible: false });
+
+  useEffect(() => {
+    const tryInit = () => {
+      const win = window as any;
+      if (phoneInputRef.current && win.intlTelInput && !itiRef.current) {
+          // Delay initialization slightly in case the input is inside a hidden container
+          setTimeout(() => {
+            try {
+              itiRef.current = win.intlTelInput(phoneInputRef.current, {
+                initialCountry: 'in',
+                separateDialCode: true,
+                utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js',
+              });
+              window.dispatchEvent(new Event('resize'));
+            } catch (e) {}
+          }, 100);
+        }
+    };
+
+    if (typeof (window as any).intlTelInput === 'undefined') {
+      const id = setInterval(() => {
+        tryInit();
+        if ((window as any).intlTelInput) clearInterval(id);
+      }, 200);
+      return () => clearInterval(id);
+    }
+
+    tryInit();
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    // Basic validation
+    if (formData.fullName.trim() === '') {
+      setFormMsg({ text: 'Please enter your name.', type: 'error', visible: true });
+      return;
+    }
+    if (formData.service.trim() === '') {
+      setFormMsg({ text: 'Please select a service.', type: 'error', visible: true });
+      return;
+    }
+
+    // Use intl-tel-input if initialized to get E.164 number
+    let mobileNumber = '';
+    if (itiRef.current) {
+      try {
+        if (formData.phone && !itiRef.current.isValidNumber()) {
+          setFormMsg({ text: 'Invalid mobile number.', type: 'error', visible: true });
+          return;
+        }
+        mobileNumber = itiRef.current.getNumber();
+      } catch (err) {
+        mobileNumber = formData.phone || '';
+      }
+    } else {
+      mobileNumber = formData.phone || '';
+    }
+
+    // prepare payload for Google Apps Script
+    const form = new FormData();
+    form.append('name', formData.fullName);
+    form.append('mobile', mobileNumber);
+    form.append('email', formData.email);
+    form.append('company', formData.company);
+    form.append('service', formData.service);
+    form.append('message', formData.message);
+
+    const submitUrl = 'https://script.google.com/macros/s/AKfycbwJx5KNzBKEP7DeyKZWHp7qoUQHL966vIZeSlg9tVnZkBiSc-foER95ywehmedBUxWs/exec';
+
+    fetch(submitUrl, { method: 'POST', body: form })
+      .then(() => {
+        setFormMsg({ text: 'Thanks — your message was sent.', type: 'success', visible: true });
+        setFormData({ fullName: '', email: '', phone: '', company: '', service: '', message: '' });
+      })
+      .catch(() => {
+        setFormMsg({ text: 'There was an error sending your message. Please try again later.', type: 'error', visible: true });
+      });
   };
 
   const faqs = [
@@ -116,10 +192,10 @@ export function Contact() {
                       Phone Number
                     </label>
                     <input
+                      ref={phoneInputRef}
                       type="tel"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="Enter your phone number"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
-                      value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
                   </div>
@@ -185,6 +261,11 @@ export function Contact() {
                     <Send size={20} className="group-hover:rotate-45 transition-transform" />
                   </motion.div>
                 </motion.button>
+                {formMsg.visible && (
+                  <div className={`mt-4 p-3 rounded-md text-sm ${formMsg.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
+                    {formMsg.text}
+                  </div>
+                )}
               </form>
             </motion.div>
 
@@ -208,7 +289,7 @@ export function Contact() {
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">Visit Us</p>
-                      <p className="text-gray-600">123 Creative Street, Design District, DD 12345</p>
+                      <p className="text-gray-600">WeWork Galaxy Business Park, Sector 62, A-44, Sushil Marg, Block A, Industrial Area, Noida, UP 201309</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -217,7 +298,7 @@ export function Contact() {
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">Call Us</p>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="text-gray-600">+91 6393754583</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -226,7 +307,7 @@ export function Contact() {
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">Email Us</p>
-                      <p className="text-gray-600">hello@artboat.digital</p>
+                      <p className="text-gray-600">artboatdigital@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
