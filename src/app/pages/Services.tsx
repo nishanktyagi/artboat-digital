@@ -6,12 +6,25 @@ import { useState } from 'react';
 export function Services() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+    const serviceImages = {
+    performanceMarketing: new URL('../../assets/images/Performance Marketing.jpeg', import.meta.url).href,
+    searchEngineOptimization: new URL('../../assets/images/Search Engine Optimization.jpeg', import.meta.url).href,
+    socialMediaManagement: new URL('../../assets/images/Social Media Management.jpeg', import.meta.url).href,
+    shopifyStoreDevelopment: new URL('../../assets/images/Shopify Store Development.jpeg', import.meta.url).href,
+    shopifyCustomDevelopment: new URL('../../assets/images/Shopify Custom Development.jpeg', import.meta.url).href,
+    shopifyStoreMaintenance: new URL('../../assets/images/Shopify Store Maintenance.jpeg', import.meta.url).href,
+    graphicDesign: new URL('../../assets/images/graphic-desigen.jpeg', import.meta.url).href,
+    onlineReputationManagement: new URL('../../assets/images/Online Reputation Management .jpeg', import.meta.url).href,
+    retentionMarketing: new URL('../../assets/images/Retention Marketing.jpeg', import.meta.url).href,
+    analyticsTracking: new URL('../../assets/images/Analytics & Tracking.jpeg', import.meta.url).href,
+  };
+
   const services = [
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: 'Performance Marketing',
       subtitle: 'Meta Ads, Google Ads, TikTok, YouTube, Pinterest, LinkedIn, X',
-      image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      image: serviceImages.performanceMarketing,
       items: [
         'Meta Ads (Facebook & Instagram)',
         'Google Ads',
@@ -29,7 +42,7 @@ export function Services() {
       icon: <Globe className="w-8 h-8" />,
       title: 'Search Engine Optimization (SEO)',
       subtitle: 'Technical SEO, Shopify SEO, Local SEO, AI search',
-      image: 'https://images.unsplash.com/photo-1537432376769-00a2b4f58f5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      image: serviceImages.searchEngineOptimization,
       items: [
         'Technical SEO',
         'Ecommerce SEO',
@@ -47,7 +60,7 @@ export function Services() {
       icon: <Smartphone className="w-8 h-8" />,
       title: 'Social Media Management',
       subtitle: 'Content, reels, engagement, creators, and reporting',
-      image: 'https://images.unsplash.com/photo-1517292987719-0369a794ec0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      image: serviceImages.socialMediaManagement,
       items: [
         'Content Planning',
         'Monthly Content Calendar',
@@ -65,7 +78,7 @@ export function Services() {
       icon: <ShoppingCart className="w-8 h-8" />,
       title: 'Shopify Store Development',
       subtitle: 'Store setup, theme work, payments, shipping and launch',
-      image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      image: serviceImages.shopifyStoreDevelopment,
       items: [
         'Shopify Store Setup',
         'Theme Setup & Customization',
@@ -83,7 +96,7 @@ export function Services() {
       icon: <Code className="w-8 h-8" />,
       title: 'Shopify Custom Development',
       subtitle: 'Custom pages, APIs, apps, subscriptions, and cart experience',
-      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      image: serviceImages.shopifyCustomDevelopment,
       items: [
         'Custom Shopify Features',
         'Custom Sections',
@@ -101,7 +114,7 @@ export function Services() {
       icon: <BarChart className="w-8 h-8" />,
       title: 'Shopify Store Maintenance',
       subtitle: 'Product updates, performance, bug fixes and ongoing support',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      image: serviceImages.shopifyStoreMaintenance,
       items: [
         'Product Updates',
         'Website Maintenance',
@@ -118,7 +131,7 @@ export function Services() {
       icon: <Palette className="w-8 h-8" />,
       title: 'Graphic Designing & Creative Production',
       subtitle: 'Ad creatives, social content, video and packaging design',
-      image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      image: serviceImages.graphicDesign,
       items: [
         'Ad Creatives',
         'Social Media Creatives',
@@ -135,7 +148,7 @@ export function Services() {
       icon: <Users className="w-8 h-8" />,
       title: 'Online Reputation Management (ORM)',
       subtitle: 'Reviews, reputation defense, sentiment monitoring and brand trust',
-      image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      image: serviceImages.onlineReputationManagement,
       items: [
         'Google Review Management',
         'Social Media Reputation',
@@ -151,7 +164,7 @@ export function Services() {
       icon: <Users className="w-8 h-8" />,
       title: 'Retention Marketing',
       subtitle: 'Email, SMS, WhatsApp, carts, winback and automation',
-      image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      image: serviceImages.retentionMarketing,
       items: [
         'Email Marketing',
         'WhatsApp Automation',
@@ -167,7 +180,7 @@ export function Services() {
       icon: <BarChart className="w-8 h-8" />,
       title: 'Analytics & Tracking',
       subtitle: 'GA4, GTM, pixel setup, conversion tracking and reporting',
-      image: 'https://images.unsplash.com/photo-1519895609939-1d84ee4d77d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      image: serviceImages.analyticsTracking,
       items: [
         'GA4 Setup',
         'Meta Pixel Setup',
