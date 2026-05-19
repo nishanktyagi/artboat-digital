@@ -37,7 +37,7 @@ export default defineConfig({
   // GitHub Pages configuration
   // If using custom domain: use base: '/'
   // If using default GitHub Pages URL: use base: '/repository-name/'
-  base: '/',
+  base: '/artboat-digital/',
 
   build: {
     outDir: 'docs',

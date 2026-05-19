@@ -8,87 +8,175 @@ export function Services() {
 
   const services = [
     {
-      icon: <ShoppingCart className="w-12 h-12" />,
-      title: 'Shopify Store Setup & Custom Development',
-      description: 'From zero to launched — fast, beautiful, and built to sell',
-      image: 'https://images.unsplash.com/photo-1758522484646-c8694d1784fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
-      features: [
-        'New Shopify store build (Starter / Growth / Enterprise tiers)',
-        'Custom theme development tailored to your brand',
-        'Product catalog setup and collections architecture',
-        'Payment gateway integration (Razorpay, Paymob, Mercado Pago, etc.)',
-        'Multi-language and multi-currency setup',
-        'Mobile-first design (80%+ shop on mobile in Tier 2 markets)',
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: 'Performance Marketing',
+      subtitle: 'Meta Ads, Google Ads, TikTok, YouTube, Pinterest, LinkedIn, X',
+      image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      items: [
+        'Meta Ads (Facebook & Instagram)',
+        'Google Ads',
+        'TikTok Ads',
+        'YouTube Ads',
+        'WhatsApp Marketing',
+        'Pinterest Ads',
+        'LinkedIn Ads',
+        'Retargeting Campaigns',
+        'Funnel Optimization',
+        'ROAS Optimization',
       ],
     },
     {
-      icon: <Code className="w-12 h-12" />,
-      title: 'Shopify Theme Design & Speed Optimization',
-      description: 'A fast, beautiful store isn\'t optional — it\'s your first salesperson',
-      image: 'https://images.unsplash.com/photo-1593720213681-e9a8778330a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
-      features: [
-        'Shopify 2.0 theme customization',
-        'Core Web Vitals optimization (page speed = conversion rate)',
-        'Brand identity integration',
-        'A/B tested layouts and homepage designs',
-        'Conversion-optimized product pages and collections',
-        'Mobile-responsive designs for emerging markets',
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Search Engine Optimization (SEO)',
+      subtitle: 'Technical SEO, Shopify SEO, Local SEO, AI search',
+      image: 'https://images.unsplash.com/photo-1537432376769-00a2b4f58f5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      items: [
+        'Technical SEO',
+        'Ecommerce SEO',
+        'Shopify SEO',
+        'Product & Category SEO',
+        'Content SEO',
+        'Keyword Research',
+        'Link Building',
+        'Local SEO',
+        'Bing SEO',
+        'AI Search Optimization',
       ],
     },
     {
-      icon: <Smartphone className="w-12 h-12" />,
-      title: 'Shopify App Integration & Custom Functionality',
-      description: 'The right apps. The right integrations. Zero bloat',
-      image: 'https://images.unsplash.com/photo-1637937459053-c788742455be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
-      features: [
-        'Shopify app audit and lean stack recommendations',
-        'ERP and inventory system integrations',
-        'WhatsApp & SMS marketing integrations (India, MENA, LATAM)',
-        'Loyalty programs and referral apps',
-        'Custom Shopify app development',
-        'Payment and shipping automation',
+      icon: <Smartphone className="w-8 h-8" />,
+      title: 'Social Media Management',
+      subtitle: 'Content, reels, engagement, creators, and reporting',
+      image: 'https://images.unsplash.com/photo-1517292987719-0369a794ec0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      items: [
+        'Content Planning',
+        'Monthly Content Calendar',
+        'Post Designing',
+        'Reel Management',
+        'Caption Writing',
+        'Community Management',
+        'Engagement Management',
+        'Influencer Coordination',
+        'Platforms: Instagram, Facebook, LinkedIn, TikTok, Pinterest, X, YouTube',
+        'Monthly Reporting',
       ],
     },
     {
-      icon: <TrendingUp className="w-12 h-12" />,
-      title: 'Shopify Growth Marketing',
-      description: 'We don\'t just run ads — we build revenue machines',
-      image: 'https://images.unsplash.com/photo-1599658880436-c61792e70672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
-      features: [
-        'Meta (Facebook/Instagram) ads with Shopify pixel tracking',
-        'Google Shopping and Performance Max campaigns',
-        'WhatsApp Business marketing (high-ROI for Tier 2 markets)',
-        'Influencer and creator marketing coordination',
-        'Email & SMS drip campaigns for abandoned carts',
-        'Full-funnel campaign management and optimization',
+      icon: <ShoppingCart className="w-8 h-8" />,
+      title: 'Shopify Store Development',
+      subtitle: 'Store setup, theme work, payments, shipping and launch',
+      image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      items: [
+        'Shopify Store Setup',
+        'Theme Setup & Customization',
+        'Product Upload',
+        'Payment Gateway Setup',
+        'Shipping Setup',
+        'App Integration',
+        'Mobile Optimization',
+        'Landing Pages',
+        'Checkout Optimization',
+        'Store Migration',
       ],
     },
     {
-      icon: <Palette className="w-12 h-12" />,
-      title: 'Shopify CRO (Conversion Rate Optimization)',
-      description: 'More traffic isn\'t always the answer. More conversions always are',
-      image: 'https://images.unsplash.com/flagged/photo-1582111945769-5255b296e574?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
-      features: [
-        'Heatmap and session recording analysis',
-        'Checkout flow optimization',
-        'Product page copywriting and image optimization',
-        'Trust-builder integrations (reviews, badges, UGC)',
-        'Pricing strategy and upsell/cross-sell setup',
-        'A/B testing and data-driven improvements',
+      icon: <Code className="w-8 h-8" />,
+      title: 'Shopify Custom Development',
+      subtitle: 'Custom pages, APIs, apps, subscriptions, and cart experience',
+      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      items: [
+        'Custom Shopify Features',
+        'Custom Sections',
+        'App Integration',
+        'Subscription Features',
+        'Bundle Features',
+        'API Integration',
+        'Custom Cart Experience',
+        'Security & Backup',
+        'Custom Product Pages',
+        'Store Monitoring',
       ],
     },
     {
-      icon: <BarChart className="w-12 h-12" />,
-      title: 'Shopify Analytics & Revenue Dashboards',
-      description: 'If you can\'t measure it, you can\'t grow it',
-      image: 'https://images.unsplash.com/photo-1686061592689-312bbfb5c055?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
-      features: [
-        'Google Analytics 4 + Shopify integration',
-        'Custom sales and marketing dashboards',
-        'Attribution modeling (which channels drive real revenue)',
-        'Monthly performance reports with actionable insights',
-        'Cohort analysis and customer lifetime value tracking',
-        'ROI tracking and revenue forecasting',
+      icon: <BarChart className="w-8 h-8" />,
+      title: 'Shopify Store Maintenance',
+      subtitle: 'Product updates, performance, bug fixes and ongoing support',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      items: [
+        'Product Updates',
+        'Website Maintenance',
+        'Speed Optimization',
+        'Bug Fixes',
+        'Website Banners',
+        'Technical Support',
+        'App Management',
+        'Security & Backup',
+        'Store Monitoring',
+      ],
+    },
+    {
+      icon: <Palette className="w-8 h-8" />,
+      title: 'Graphic Designing & Creative Production',
+      subtitle: 'Ad creatives, social content, video and packaging design',
+      image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      items: [
+        'Ad Creatives',
+        'Social Media Creatives',
+        'Product Banners',
+        'Website Banners',
+        'Video Editing',
+        'Motion Graphics',
+        'Packaging Design',
+        'Branding Assets',
+        'PR Support',
+      ],
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Online Reputation Management (ORM)',
+      subtitle: 'Reviews, reputation defense, sentiment monitoring and brand trust',
+      image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      items: [
+        'Google Review Management',
+        'Social Media Reputation',
+        'Negative Review Handling',
+        'Brand Monitoring',
+        'Customer Sentiment Monitoring',
+        'PR Support',
+        'Winback Campaigns',
+        'Trust Optimization',
+      ],
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Retention Marketing',
+      subtitle: 'Email, SMS, WhatsApp, carts, winback and automation',
+      image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      items: [
+        'Email Marketing',
+        'WhatsApp Automation',
+        'SMS Marketing',
+        'Abandoned Cart Automation',
+        'Winback Campaigns',
+        'Upsell & Cross-Sell Automation',
+        'Retention Funnels',
+        'Customer Lifetime Value',
+      ],
+    },
+    {
+      icon: <BarChart className="w-8 h-8" />,
+      title: 'Analytics & Tracking',
+      subtitle: 'GA4, GTM, pixel setup, conversion tracking and reporting',
+      image: 'https://images.unsplash.com/photo-1519895609939-1d84ee4d77d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900',
+      items: [
+        'GA4 Setup',
+        'Meta Pixel Setup',
+        'GTM Setup',
+        'Conversion API',
+        'Ecommerce Tracking',
+        'Dashboard Reporting',
+        'Funnel Analysis',
+        'Attribution Reporting',
       ],
     },
   ];
@@ -96,23 +184,23 @@ export function Services() {
   const whyChooseUs = [
     {
       icon: <ShoppingCart className="w-8 h-8" />,
-      title: 'Shopify Specialists',
-      description: 'We live and breathe Shopify. No generalist guesswork.',
+      title: 'Full-stack ecommerce growth',
+      description: 'Performance marketing, SEO, social, store development and retention marketing under one roof.',
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: 'Built for Your Market',
-      description: 'We understand local payment preferences, mobile behavior, and consumer psychology in Tier 2 markets.',
+      title: 'Shopify + D2C focus',
+      description: 'Designed for Shopify brands and D2C businesses that want scalable revenue growth.',
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: 'ROI-First Mindset',
-      description: 'Every decision is tied to your revenue, not vanity metrics.',
+      title: 'Data-first execution',
+      description: 'Every campaign, page and push is measured to improve ROAS and customer lifetime value.',
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: 'End-to-End Partnership',
-      description: 'From your first Shopify store to your 10th market expansion, we grow with you.',
+      title: 'Growth partnership',
+      description: 'We support launches, scale phases and long-term growth for ambitious ecommerce brands.',
     },
   ];
 
@@ -125,17 +213,17 @@ export function Services() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
           >
-            Shopify-First Services Built for E-commerce Brands That Mean Business
+            Full-stack Ecommerce Growth Agency for Shopify & D2C Brands
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-purple-100 max-w-3xl mx-auto"
+            className="text-base sm:text-xl md:text-2xl text-purple-100 max-w-3xl mx-auto"
           >
-            Every service we offer is built around one goal — growing your Shopify store's revenue sustainably
+            We help Ecommerce and Shopify brands scale through Performance Marketing, SEO, Social Media Management, Store Development, and Retention Marketing
           </motion.p>
         </div>
       </section>
@@ -143,56 +231,55 @@ export function Services() {
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50, rotateX: -15 }}
                 whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: index * 0.1, type: 'spring', stiffness: 100 }}
+                transition={{ duration: 0.7, delay: index * 0.06, type: 'spring', stiffness: 100 }}
                 whileHover={{
-                  y: -10,
-                  rotateY: 5,
+                  y: -8,
+                  rotateY: 3,
                   transition: { duration: 0.3 }
                 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all"
+                className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all"
                 style={{ transformStyle: 'preserve-3d' }}
               >
                 <div className="relative h-56 overflow-hidden group">
                   <motion.img
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.08 }}
                     transition={{ duration: 0.4 }}
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-purple-900/60 transition-all duration-300"></div>
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                    className="absolute bottom-4 left-6 w-16 h-16 bg-white rounded-xl flex items-center justify-center text-purple-600 shadow-xl"
-                  >
+                  <div className="absolute bottom-4 left-4 w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-purple-600 shadow-xl">
                     {service.icon}
-                  </motion.div>
+                  </div>
                 </div>
-                <div className="p-8">
-                  <h3 className="text-3xl font-bold mb-3 text-gray-900">
+                <div className="p-6 sm:p-8">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-2 text-gray-900">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-6">
-                    {service.description}
+                  <p className="text-sm sm:text-base text-gray-600 mb-4">
+                    {service.subtitle}
                   </p>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-purple-600"></div>
-                        </div>
-                        <span className="text-gray-700">{feature}</span>
+                  <ul className="grid grid-cols-1 gap-2">
+                    {service.items.slice(0, 6).map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-gray-700 text-sm sm:text-base">
+                        <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-purple-600" />
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
+                  {service.items.length > 6 && (
+                    <p className="mt-4 text-sm text-gray-500">
+                      +{service.items.length - 6} more Shopify growth capabilities
+                    </p>
+                  )}
                 </div>
               </motion.div>
             ))}
