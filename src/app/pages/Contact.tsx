@@ -318,7 +318,7 @@ export function Contact() {
                     required
                   />
                 </div>
-
+        
                 <motion.button
                   type="submit"
                   whileHover={{ scale: 1.05, boxShadow: '0 20px 25px -5px rgba(147, 51, 234, 0.4)' }}
