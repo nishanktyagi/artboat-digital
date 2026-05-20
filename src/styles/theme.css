@@ -184,3 +184,6 @@
     overflow-x: clip !important;
   }
 }
+.iti--allow-dropdown{
+  width: 100% !important;
+}

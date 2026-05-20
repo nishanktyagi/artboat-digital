@@ -18,6 +18,7 @@ export function Home() {
     onlineReputationManagement: new URL('../../assets/images/Online Reputation Management .jpeg', import.meta.url).href,
     retentionMarketing: new URL('../../assets/images/Retention Marketing.jpeg', import.meta.url).href,
     analyticsTracking: new URL('../../assets/images/Analytics & Tracking.jpeg', import.meta.url).href,
+    homeBg: new URL('../../assets/images/home-bg.jpg', import.meta.url).href,
   };
 
   const services = [
@@ -90,7 +91,7 @@ export function Home() {
         {/* Banner Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1761223976372-f2324a8e2812?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkaWdpdGFsJTIwdGVjaG5vbG9neSUyMGdyYWRpZW50JTIwcHVycGxlJTIwYmx1ZXxlbnwxfHx8fDE3Nzc0ODQ5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            src={serviceImages.homeBg}
             alt="Digital Technology Banner"
             className="w-full h-full object-cover"
           />

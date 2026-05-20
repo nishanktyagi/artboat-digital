@@ -61,56 +61,154 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     tryInit();
   }, [isOpen]);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (formData.fullName.trim() === '') {
-      setFormMsg({ text: 'Please enter your name.', type: 'error', visible: true });
-      return;
-    }
+ const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
 
-    let mobileNumber = '';
-    if (itiRef.current) {
-      try {
-        if (formData.phone && !itiRef.current.isValidNumber()) {
-          setFormMsg({ text: 'Invalid mobile number.', type: 'error', visible: true });
-          return;
-        }
-        mobileNumber = itiRef.current.getNumber();
-      } catch (err) {
-        mobileNumber = formData.phone || '';
+  // Full Name
+  if (formData.fullName.trim() === '') {
+    setFormMsg({
+      text: 'Please enter your full name.',
+      type: 'error',
+      visible: true
+    });
+    return;
+  }
+
+  // Email
+  if (formData.email.trim() === '') {
+    setFormMsg({
+      text: 'Please enter your email address.',
+      type: 'error',
+      visible: true
+    });
+    return;
+  }
+
+  // Phone
+  if (formData.phone.trim() === '') {
+    setFormMsg({
+      text: 'Please enter your phone number.',
+      type: 'error',
+      visible: true
+    });
+    return;
+  }
+
+  // Company
+  if (formData.company.trim() === '') {
+    setFormMsg({
+      text: 'Please enter your company name.',
+      type: 'error',
+      visible: true
+    });
+    return;
+  }
+
+  // Service
+  if (formData.service.trim() === '') {
+    setFormMsg({
+      text: 'Please select a service.',
+      type: 'error',
+      visible: true
+    });
+    return;
+  }
+
+  // Message
+  if (formData.message.trim() === '') {
+    setFormMsg({
+      text: 'Please enter your project details.',
+      type: 'error',
+      visible: true
+    });
+    return;
+  }
+
+  // Phone Validation
+  let mobileNumber = '';
+
+  if (itiRef.current) {
+    try {
+
+      if (!itiRef.current.isValidNumber()) {
+        setFormMsg({
+          text: 'Invalid mobile number.',
+          type: 'error',
+          visible: true
+        });
+        return;
       }
-    } else {
+
+      mobileNumber = itiRef.current.getNumber();
+
+    } catch (err) {
       mobileNumber = formData.phone || '';
     }
+  } else {
+    mobileNumber = formData.phone || '';
+  }
 
-    setIsSubmitting(true);
+  setIsSubmitting(true);
 
-    const payload = new FormData();
-    payload.append('name', formData.fullName);
-    payload.append('mobile', mobileNumber);
-    payload.append('email', formData.email);
-    payload.append('company', formData.company);
-    payload.append('service', formData.service);
-    payload.append('message', formData.message);
+  const payload = new FormData();
 
-    const submitUrl = 'https://script.google.com/macros/s/AKfycbwJx5KNzBKEP7DeyKZWHp7qoUQHL966vIZeSlg9tVnZkBiSc-foER95ywehmedBUxWs/exec';
+  payload.append('name', formData.fullName);
+  payload.append('mobile', mobileNumber);
+  payload.append('email', formData.email);
+  payload.append('company', formData.company);
+  payload.append('service', formData.service);
+  payload.append('message', formData.message);
 
-    fetch(submitUrl, { method: 'POST', body: payload })
-      .then(() => {
-        setFormMsg({ text: 'Thanks — your message was sent.', type: 'success', visible: true });
-        setFormData({ fullName: '', email: '', phone: '', company: '', service: '', message: '' });
-        // close modal shortly after success
-        setTimeout(() => {
-          setFormMsg({ text: '', type: '', visible: false });
-          setIsSubmitting(false);
-          onClose();
-        }, 1600);
-      })
-      .catch(() => {
-        setFormMsg({ text: 'There was an error sending your message. Please try again later.', type: 'error', visible: true });
-        setIsSubmitting(false);
+  const submitUrl =
+    'https://script.google.com/macros/s/AKfycbwJx5KNzBKEP7DeyKZWHp7qoUQHL966vIZeSlg9tVnZkBiSc-foER95ywehmedBUxWs/exec';
+
+  fetch(submitUrl, {
+    method: 'POST',
+    body: payload
+  })
+    .then(() => {
+
+      setFormMsg({
+        text: 'Thanks — your message was sent.',
+        type: 'success',
+        visible: true
       });
-  };
+
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        company: '',
+        service: '',
+        message: '',
+      });
+
+      setTimeout(() => {
+        setFormMsg({
+          text: '',
+          type: '',
+          visible: false
+        });
+
+        setIsSubmitting(false);
+
+        onClose();
+
+      }, 1600);
+
+    })
+    .catch(() => {
+
+      setFormMsg({
+        text: 'There was an error sending your message.',
+        type: 'error',
+        visible: true
+      });
+
+      setIsSubmitting(false);
+
+    });
+};
 
   return (
     <AnimatePresence>
@@ -185,11 +283,12 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
+                      Phone Number *
                     </label>
                     <input
                       ref={phoneInputRef}
                       type="tel"
+                      required
                       placeholder="Enter your phone number"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
                       value={formData.phone}

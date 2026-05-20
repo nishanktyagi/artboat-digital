@@ -6,7 +6,7 @@ export function Contact() {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
-    phone: '',
+    mobile: '',
     company: '',
     service: '',
     message: '',
@@ -14,24 +14,24 @@ export function Contact() {
 
   const phoneInputRef = useRef<HTMLInputElement | null>(null);
   const itiRef = useRef<any>(null);
-  const [formMsg, setFormMsg] = useState<{ text: string; type: 'success' | 'error' | '' ; visible: boolean }>({ text: '', type: '', visible: false });
+  const [formMsg, setFormMsg] = useState<{ text: string; type: 'success' | 'error' | ''; visible: boolean }>({ text: '', type: '', visible: false });
 
   useEffect(() => {
     const tryInit = () => {
       const win = window as any;
       if (phoneInputRef.current && win.intlTelInput && !itiRef.current) {
-          // Delay initialization slightly in case the input is inside a hidden container
-          setTimeout(() => {
-            try {
-              itiRef.current = win.intlTelInput(phoneInputRef.current, {
-                initialCountry: 'in',
-                separateDialCode: true,
-                utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js',
-              });
-              window.dispatchEvent(new Event('resize'));
-            } catch (e) {}
-          }, 100);
-        }
+        // Delay initialization slightly in case the input is inside a hidden container
+        setTimeout(() => {
+          try {
+            itiRef.current = win.intlTelInput(phoneInputRef.current, {
+              initialCountry: 'in',
+              separateDialCode: true,
+              utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js',
+            });
+            window.dispatchEvent(new Event('resize'));
+          } catch (e) { }
+        }, 100);
+      }
     };
 
     if (typeof (window as any).intlTelInput === 'undefined') {
@@ -47,34 +47,85 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Basic validation
+
+    // Full Name
     if (formData.fullName.trim() === '') {
-      setFormMsg({ text: 'Please enter your name.', type: 'error', visible: true });
-      return;
-    }
-    if (formData.service.trim() === '') {
-      setFormMsg({ text: 'Please select a service.', type: 'error', visible: true });
+      setFormMsg({
+        text: 'Please enter your full name.',
+        type: 'error',
+        visible: true
+      });
       return;
     }
 
-    // Use intl-tel-input if initialized to get E.164 number
+    // Email
+    if (formData.email.trim() === '') {
+      setFormMsg({
+        text: 'Please enter your email address.',
+        type: 'error',
+        visible: true
+      });
+      return;
+    }
+
+    // Phone
+    if (formData.mobile.trim() === '') {
+      setFormMsg({
+        text: 'Please enter your phone number.',
+        type: 'error',
+        visible: true
+      });
+      return;
+    }
+
+    
+
+    // Service
+    if (formData.service.trim() === '') {
+      setFormMsg({
+        text: 'Please select a service.',
+        type: 'error',
+        visible: true
+      });
+      return;
+    }
+
+    // Message
+    if (formData.message.trim() === '') {
+      setFormMsg({
+        text: 'Please enter your project details.',
+        type: 'error',
+        visible: true
+      });
+      return;
+    }
+
+    // Validate Phone Number
     let mobileNumber = '';
+
     if (itiRef.current) {
       try {
-        if (formData.phone && !itiRef.current.isValidNumber()) {
-          setFormMsg({ text: 'Invalid mobile number.', type: 'error', visible: true });
+        if (!itiRef.current.isValidNumber()) {
+          setFormMsg({
+            text: 'Invalid mobile number.',
+            type: 'error',
+            visible: true
+          });
           return;
         }
+
         mobileNumber = itiRef.current.getNumber();
+
       } catch (err) {
-        mobileNumber = formData.phone || '';
+        mobileNumber = formData.mobile || '';
       }
     } else {
-      mobileNumber = formData.phone || '';
+      mobileNumber = formData.mobile || '';
     }
 
-    // prepare payload for Google Apps Script
+    // Prepare Form Data
     const form = new FormData();
+
     form.append('name', formData.fullName);
     form.append('mobile', mobileNumber);
     form.append('email', formData.email);
@@ -82,18 +133,37 @@ export function Contact() {
     form.append('service', formData.service);
     form.append('message', formData.message);
 
-    const submitUrl = 'https://script.google.com/macros/s/AKfycbwJx5KNzBKEP7DeyKZWHp7qoUQHL966vIZeSlg9tVnZkBiSc-foER95ywehmedBUxWs/exec';
+    const submitUrl =
+      'https://script.google.com/macros/s/AKfycbwJx5KNzBKEP7DeyKZWHp7qoUQHL966vIZeSlg9tVnZkBiSc-foER95ywehmedBUxWs/exec';
 
-    fetch(submitUrl, { method: 'POST', body: form })
+    fetch(submitUrl, {
+      method: 'POST',
+      body: form
+    })
       .then(() => {
-        setFormMsg({ text: 'Thanks — your message was sent.', type: 'success', visible: true });
-        setFormData({ fullName: '', email: '', phone: '', company: '', service: '', message: '' });
+        setFormMsg({
+          text: 'Thanks — your message was sent.',
+          type: 'success',
+          visible: true
+        });
+
+        setFormData({
+          fullName: '',
+          email: '',
+          mobile: '',
+          company: '',
+          service: '',
+          message: '',
+        });
       })
       .catch(() => {
-        setFormMsg({ text: 'There was an error sending your message. Please try again later.', type: 'error', visible: true });
+        setFormMsg({
+          text: 'There was an error sending your message.',
+          type: 'error',
+          visible: true
+        });
       });
   };
-
   const faqs = [
     {
       question: 'How long does it take to see results from Shopify marketing?',
@@ -189,14 +259,16 @@ export function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
+                      Phone Number *
                     </label>
                     <input
                       ref={phoneInputRef}
                       type="tel"
                       placeholder="Enter your phone number"
+                      value={formData.mobile}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+                      required
                     />
                   </div>
                   <div>
