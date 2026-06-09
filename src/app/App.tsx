@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { MessageCircle } from 'lucide-react';
 import { Header } from './components/Header';
@@ -8,12 +8,41 @@ import { Services } from './pages/Services';
 import { About } from './pages/About';
 import { Portfolio } from './pages/Portfolio';
 import { Contact } from './pages/Contact';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsAndConditions } from './pages/TermsAndConditions';
 import { ContactModal } from './components/ContactModal';
+
+const getRedirectPath = () => {
+  const url = new URL(window.location.href);
+  const redirect = url.searchParams.get('redirect');
+  if (redirect) {
+    return redirect.replace(/\/+/g, '/').replace(/\/$/, '').replace(/^\//, '') || 'home';
+  }
+  const path = window.location.pathname.replace(/\/+/g, '/').replace(/\/$/, '').replace(/^\//, '');
+  return path || 'home';
+};
+
+const getHrefForPage = (page: string) => {
+  return page === 'home' ? '/' : `/${page}`;
+};
 
 // Main App Component
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+
+  useEffect(() => {
+    const handlePopState = () => setCurrentPage(getRedirectPath());
+    handlePopState();
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const navigateToPage = (page: string) => {
+    const nextUrl = getHrefForPage(page);
+    window.history.pushState({}, '', nextUrl);
+    setCurrentPage(page);
+  };
 
   const renderPage = () => {
     switch (currentPage) {
@@ -27,6 +56,10 @@ export default function App() {
         return <Portfolio />;
       case 'contact':
         return <Contact />;
+      case 'privacy-policy':
+        return <PrivacyPolicy />;
+      case 'terms-and-conditions':
+        return <TermsAndConditions />;
       default:
         return <Home />;
     }
@@ -34,11 +67,11 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Header currentPage={currentPage} navigateToPage={navigateToPage} />
       <main className="flex-grow">
         {renderPage()}
       </main>
-      <Footer setCurrentPage={setCurrentPage} />
+      <Footer navigateToPage={navigateToPage} />
       <motion.button
         type="button"
         aria-label="Open enquiry form"

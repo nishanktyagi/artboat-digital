@@ -18,10 +18,17 @@ export function Home() {
     onlineReputationManagement: new URL('../../assets/images/Online Reputation Management .jpeg', import.meta.url).href,
     retentionMarketing: new URL('../../assets/images/Retention Marketing.jpeg', import.meta.url).href,
     analyticsTracking: new URL('../../assets/images/Analytics & Tracking.jpeg', import.meta.url).href,
+    realEstate: new URL('../../assets/images/real-estate-safe.svg', import.meta.url).href,
     homeBg: new URL('../../assets/images/home-bg.jpg', import.meta.url).href,
   };
 
   const services = [
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Real Estate Marketing',
+      description: 'Real Estate Marketing Solutions, Property Lead Generation, Project Launch Marketing, Meta Ads for Real Estate, Google Ads for Real Estate, Landing Page Development, Real Estate SEO, WhatsApp Lead Automation, CRM Integration.',
+      image: serviceImages.realEstate,
+    },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: 'Performance Marketing',

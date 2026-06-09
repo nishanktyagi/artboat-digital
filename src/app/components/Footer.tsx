@@ -1,14 +1,15 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 interface FooterProps {
-  setCurrentPage: (page: string) => void;
+  navigateToPage: (page: string) => void;
 }
 
-export function Footer({ setCurrentPage }: FooterProps) {
+export function Footer({ navigateToPage }: FooterProps) {
   const handleNavClick = (page: string) => {
-    setCurrentPage(page);
+    navigateToPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
   return (
     <footer className="bg-gradient-to-br from-purple-900 via-purple-800 to-blue-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -67,6 +68,16 @@ export function Footer({ setCurrentPage }: FooterProps) {
               <li>
                 <button onClick={() => handleNavClick('contact')} className="text-purple-200 hover:text-white transition-colors">
                   Contact
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNavClick('terms-and-conditions')} className="text-purple-200 hover:text-white transition-colors">
+                  Terms & Conditions
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNavClick('privacy-policy')} className="text-purple-200 hover:text-white transition-colors">
+                  Privacy Policy
                 </button>
               </li>
             </ul>

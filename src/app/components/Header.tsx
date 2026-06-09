@@ -4,10 +4,10 @@ import { Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   currentPage: string;
-  setCurrentPage: (page: string) => void;
+  navigateToPage: (page: string) => void;
 }
 
-export function Header({ currentPage, setCurrentPage }: HeaderProps) {
+export function Header({ currentPage, navigateToPage }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -31,10 +31,19 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
     { name: 'Contact', page: 'contact' },
   ];
 
+  const getHrefForPage = (page: string) => {
+    return page === 'home' ? '/' : `/${page}`;
+  };
+
   const handleNavClick = (page: string) => {
-    setCurrentPage(page);
+    navigateToPage(page);
     setIsMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleAnchorNavClick = (event: React.MouseEvent<HTMLAnchorElement>, page: string) => {
+    event.preventDefault();
+    handleNavClick(page);
   };
 
   return (
@@ -60,9 +69,10 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.page}
-                onClick={() => handleNavClick(item.page)}
+                href={getHrefForPage(item.page)}
+                onClick={(event) => handleAnchorNavClick(event, item.page)}
                 className={`relative transition-colors ${
                   showWhiteText
                     ? currentPage === item.page
@@ -82,7 +92,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
                     }`}
                   />
                 )}
-              </button>
+              </a>
             ))}
           </nav>
 
@@ -115,9 +125,10 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
         >
           <nav className="flex flex-col p-4 gap-4">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.page}
-                onClick={() => handleNavClick(item.page)}
+                href={getHrefForPage(item.page)}
+                onClick={(event) => handleAnchorNavClick(event, item.page)}
                 className={`p-2 text-left ${
                   currentPage === item.page
                     ? 'text-purple-600'
@@ -125,14 +136,15 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 }`}
               >
                 {item.name}
-              </button>
+              </a>
             ))}
-            <button
-              onClick={() => handleNavClick('contact')}
+            <a
+              href={getHrefForPage('contact')}
+              onClick={(event) => handleAnchorNavClick(event, 'contact')}
               className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-2 rounded-lg text-center"
             >
               Get Started
-            </button>
+            </a>
           </nav>
         </motion.div>
       )}
